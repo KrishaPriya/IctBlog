@@ -21,6 +21,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
+import static Scripts.Utils.WEBDRIVER_WAIT_TIME_SEC;
 
 public class TestLogin extends TestBase {
     LoginPage objLogin;
@@ -49,9 +50,9 @@ public class TestLogin extends TestBase {
 
         objLogin.clickLogin();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
 
-        WebDriverWait w = new WebDriverWait(driver, 2);
+        WebDriverWait w = new WebDriverWait(driver, WEBDRIVER_WAIT_TIME_SEC);
 
         if(w.until(ExpectedConditions.alertIsPresent())==null) {
             Assert.assertFalse(false, "We should have got alert");

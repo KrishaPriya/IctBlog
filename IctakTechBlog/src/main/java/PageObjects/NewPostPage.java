@@ -58,7 +58,7 @@ public class NewPostPage {
     }
     public void clickSubmit() throws InterruptedException {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Submit);Thread.sleep(500);
-        Submit.click(); //now it clicks on element
+        Submit.click();
     }
 
     public void clickLogout(){

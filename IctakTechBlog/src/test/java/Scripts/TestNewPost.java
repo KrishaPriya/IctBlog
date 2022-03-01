@@ -18,6 +18,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
+import static Scripts.Utils.WEBDRIVER_WAIT_TIME_SEC;
 
 public class TestNewPost extends TestBase{
     LoginPage objLogin;
@@ -56,7 +57,7 @@ public class TestNewPost extends TestBase{
         Thread.sleep(5000);
         objNewPost.clickSubmit();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
 
         WebDriverWait w = new WebDriverWait(driver, 2);
 
@@ -64,7 +65,7 @@ public class TestNewPost extends TestBase{
             Assert.assertFalse(false, "We should have got alert");
         }
         else {
-            Assert.assertEquals("New post added", driver.switchTo().alert().getText());
+            Assert.assertEquals("New Post Added", driver.switchTo().alert().getText());
             driver.switchTo().alert().accept();
         }
     }
@@ -72,7 +73,7 @@ public class TestNewPost extends TestBase{
     private void loginToUser() throws InterruptedException, IOException {
         Actions act = new Actions(driver);
         objLogin = new LoginPage(driver);
-        Thread.sleep(2000);
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
         objLogin.selectLoginDropdown();
         String username = ExcelUtility.getCellData(0, 0);
         String password = ExcelUtility.getCellData(0, 1);
