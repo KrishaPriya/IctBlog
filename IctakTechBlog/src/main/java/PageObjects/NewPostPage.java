@@ -50,7 +50,7 @@ public class NewPostPage {
     }
     public void setCategory(){
         Select categoryMenu=new Select(Category);
-        categoryMenu.selectByIndex(2);
+        categoryMenu.selectByValue("4: SPACE");
 
     }
     public void setPost(String postdesc){

@@ -6,8 +6,9 @@
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="Scripts.TestLogin"/>
-            <class name="Scripts.TestMyPost"/>
+            <class name="Scripts.TestDeleteMyPost"/>
             <class name="Scripts.TestNewPost"/>
+<!--            <class name="Scripts.TestMyPost"/>-->
         </classes>
     </test>
 </suite>

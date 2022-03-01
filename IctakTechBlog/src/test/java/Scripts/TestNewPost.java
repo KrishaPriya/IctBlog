@@ -2,11 +2,10 @@ package Scripts;
 
 
 import Constants.AutomationConstants;
-import PageObjects.LoginPage;
-import PageObjects.MyPostPage;
-import PageObjects.NewPostPage;
-import PageObjects.SignUpPage;
+import PageObjects.*;
 import Utilities.ExcelUtility;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -25,6 +24,7 @@ public class TestNewPost extends TestBase{
     SignUpPage objSignUp;
     NewPostPage objNewPost;
     MyPostPage objMyPost;
+    HomePage objHomePage;
 
     @AfterTest
     void afterTestDone(){
@@ -45,28 +45,33 @@ public class TestNewPost extends TestBase{
 
         Thread.sleep(WEBDRIVER_WAIT_TIME);
 
-        // update new post
-        objNewPost=new NewPostPage(driver);
-        String Title=ExcelUtility.getCellData(4,0);
-        String Image=ExcelUtility.getCellData(4,1);
-        String Post=ExcelUtility.getCellData(4,2);
-        objNewPost.setTitle(Title);
-        objNewPost.setImage(Image);
-        objNewPost.setCategory();
-        objNewPost.setPost(Post);
-        Thread.sleep(5000);
-        objNewPost.clickSubmit();
+        for (int i = 4; i < 10; i++) {
+            // update new post
+            objNewPost=new NewPostPage(driver);
+            String url = driver.getCurrentUrl();
+            String Title=ExcelUtility.getCellData(i,0);
+            String Image=ExcelUtility.getCellData(i,1);
+            String Post=ExcelUtility.getCellData(i,2);
+            objNewPost.setTitle(Title);
+            objNewPost.setImage(Image);
+            objNewPost.setCategory();
+            objNewPost.setPost(Post);
+            Thread.sleep(5000);
+            objNewPost.clickSubmit();
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
 
-        WebDriverWait w = new WebDriverWait(driver, 2);
+            WebDriverWait w = new WebDriverWait(driver, 3);
 
-        if(w.until(ExpectedConditions.alertIsPresent())==null) {
-            Assert.assertFalse(false, "We should have got alert");
-        }
-        else {
-            Assert.assertEquals("New Post Added", driver.switchTo().alert().getText());
-            driver.switchTo().alert().accept();
+            if(w.until(ExpectedConditions.alertIsPresent())==null) {
+                Assert.assertFalse(false, "We should have got alert");
+            }
+            else {
+                Assert.assertEquals("New Post Added", driver.switchTo().alert().getText());
+                driver.switchTo().alert().accept();
+            }
+
+            driver.get(url);
         }
     }
 

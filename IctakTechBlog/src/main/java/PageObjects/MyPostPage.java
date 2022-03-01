@@ -1,17 +1,22 @@
 package PageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class MyPostPage {
+    private static final long WEBDRIVER_WAIT_TIME_SEC = 3000;
     WebDriver driver;
     @FindBy(xpath="/html/body/app-root/app-trainerpost/app-header/nav/div/div/ul/li[5]/a")
-    private WebElement newpost;
+    public WebElement newpost;
 
     @FindBy(xpath="/html/body/app-root/app-mypost/div[2]/li[1]/div/div/div/button[1]")
     private WebElement Edit;
@@ -75,6 +80,53 @@ public class MyPostPage {
     public void logout()
     {
         logout.click();
+    }
+
+    public void deleteAllPost() throws InterruptedException {
+        WebElement button = getNextDeleteButton();
+        while (button != null){
+            // scroll to button.
+            System.out.println("Found Delete Button "+ button.getText());
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(2000);
+
+            // Delete action
+            button.click();
+
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
+            WebDriverWait w = new WebDriverWait(driver, WEBDRIVER_WAIT_TIME_SEC);
+
+            // Accept Delete
+            if(w.until(ExpectedConditions.alertIsPresent())==null) {
+              System.out.println("We should have got alert");
+            }
+            else {
+                driver.switchTo().alert().getText();
+                driver.switchTo().alert().accept();
+            }
+
+            // Refresh page.
+            driver.navigate().refresh();
+
+            // Get next delete.
+            if (w.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("button")))) == null){
+                System.out.println("page refresh failed...");
+            }else{
+                button = getNextDeleteButton();
+            }
+        }
+
+    }
+
+    private WebElement getNextDeleteButton(){
+        List<WebElement> buttons = driver.findElements(By.tagName("button"));
+        int count1 =0;
+        for(WebElement button : buttons){
+            if(button.getText().equals("Delete")){
+               return button;
+            }
+        }
+
+        return null;
     }
 
     public void clickOnNewPost(){

@@ -93,11 +93,9 @@ public class TestLogin extends TestBase {
         objLogin.setUserName(username);
         objLogin.setPassword(password);
         objLogin.clickLogin();
-
         // Check the url
         String strUrl = driver.getCurrentUrl();
         Assert.assertEquals(strUrl,"http://64.227.132.106/mypost");
-
         // Check the title of page.
         String expectedTitle = AutomationConstants.HOMEPAGETITLE;
         String actualTitle = driver.getTitle();
