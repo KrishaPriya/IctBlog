@@ -1,16 +1,17 @@
 package PageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NewPostPage {
     WebDriver driver;
 
-    @FindBy(xpath="/html/body/app-root/app-trainerpost/app-header/nav/div/div/ul/li[5]/a")
-    private WebElement Newpost;
     @FindBy(id="exampleInputEmail1")
     private WebElement Title;
 
@@ -19,8 +20,10 @@ public class NewPostPage {
 
     @FindBy(xpath="/html/body/app-root/app-trainerpost/form/div[4]/select")
     private WebElement Category;
+
     @FindBy(xpath="/html/body/app-root/app-trainerpost/form/div[5]/textarea")
     private WebElement Post;
+
     @FindBy(xpath="/html/body/app-root/app-trainerpost/form/button")
     private WebElement Submit;
 
@@ -37,9 +40,6 @@ public class NewPostPage {
         PageFactory.initElements(driver,this);
     }
 
-    public void setNewpost(){
-        Newpost.click();
-    }
 
     public void setTitle(String strTitle){
         Title.sendKeys(strTitle);
@@ -56,8 +56,9 @@ public class NewPostPage {
     public void setPost(String postdesc){
         Post.sendKeys(postdesc);
     }
-    public void clickSubmit(){
-        Submit.click();
+    public void clickSubmit() throws InterruptedException {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Submit);Thread.sleep(500);
+        Submit.click(); //now it clicks on element
     }
 
     public void clickLogout(){
@@ -68,13 +69,6 @@ public class NewPostPage {
         String actTitle = actualTitle.getText();
         return actTitle;
     }
-
-   /* public void ActualTitle(String newTitle)
-    {
-        String actTitle=actualTitle.getText();
-    }
-
-    */
 }
 
 

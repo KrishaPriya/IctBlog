@@ -1,12 +1,17 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class MyPostPage {
     WebDriver driver;
+    @FindBy(xpath="/html/body/app-root/app-trainerpost/app-header/nav/div/div/ul/li[5]/a")
+    private WebElement newpost;
 
     @FindBy(xpath="/html/body/app-root/app-mypost/div[2]/li[1]/div/div/div/button[1]")
     private WebElement Edit;
@@ -28,6 +33,8 @@ public class MyPostPage {
     private WebElement Delete;
 
 
+    @FindBy(xpath = "/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[10]/a")
+    private WebElement logout;
 
 
     public  MyPostPage(WebDriver driver)
@@ -65,5 +72,12 @@ public class MyPostPage {
         Delete.click();
     }
 
+    public void logout()
+    {
+        logout.click();
+    }
 
+    public void clickOnNewPost(){
+        driver.findElement(By.xpath("/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[5]/a")).click();
+    }
 }

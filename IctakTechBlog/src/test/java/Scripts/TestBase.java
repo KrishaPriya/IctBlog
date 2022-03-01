@@ -3,10 +3,7 @@ package Scripts;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,10 +30,10 @@ public class TestBase {
 
 
     @Parameters("browser")
-    @BeforeTest
+    @BeforeClass
     public void onSetup(String browserName) {
-      /*  Thread.currentThread().getStackTrace();
-        System.out.println("onSetup is called....");*/
+        Thread.currentThread().getStackTrace();
+        System.out.println("onSetup is called....");
         TestBase();
         if (browserName.equals("chrome")) {
             System.setProperty("webdriver.chrome.driver", driverpath);
@@ -51,8 +48,8 @@ public class TestBase {
         driver.manage().window().maximize();
     }
 
-    @AfterTest
-    public void teardown(){
+    @AfterClass
+    public void teardown() {
         driver.quit();
     }
 
