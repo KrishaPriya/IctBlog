@@ -1,11 +1,12 @@
-package Scripts;
+package Scripts.Trainer;
 
 
 import Constants.AutomationConstants;
 import PageObjects.*;
+import PageObjects.Trainer.TrainerMyPostPage;
+import PageObjects.Trainer.TrainerNewPostPage;
+import Scripts.TestBase;
 import Utilities.ExcelUtility;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,11 +20,11 @@ import java.time.Duration;
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME_SEC;
 
-public class TestNewPost extends TestBase{
+public class TestTrainerNewPost extends TestBase {
     LoginPage objLogin;
     SignUpPage objSignUp;
-    NewPostPage objNewPost;
-    MyPostPage objMyPost;
+    TrainerNewPostPage objNewPost;
+    TrainerMyPostPage objMyPost;
     HomePage objHomePage;
 
     @AfterTest
@@ -40,14 +41,14 @@ public class TestNewPost extends TestBase{
         loginToUser();
 
         // Go to new post.
-        objMyPost = new MyPostPage(driver);
+        objMyPost = new TrainerMyPostPage(driver);
         objMyPost.clickOnNewPost();
 
         Thread.sleep(WEBDRIVER_WAIT_TIME);
 
-        for (int i = 4; i < 10; i++) {
+        for (int i = 9; i < 12; i++) {
             // update new post
-            objNewPost=new NewPostPage(driver);
+            objNewPost=new TrainerNewPostPage(driver);
             String url = driver.getCurrentUrl();
             String Title=ExcelUtility.getCellData(i,0);
             String Image=ExcelUtility.getCellData(i,1);

@@ -30,4 +30,8 @@ public class HomePage {
     public void clickOnNewPost(){
         driver.findElement(By.xpath("/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[5]/a")).click();
     }
+
+    public void clickOnMyPost(){
+        driver.findElement(By.xpath("/html/body/app-root/app-home/app-header/nav/div/div/ul/li[3]/a")).click();
+    }
 }

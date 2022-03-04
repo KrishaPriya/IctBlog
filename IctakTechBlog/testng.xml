@@ -5,10 +5,12 @@
     <test thread-count="5" name="Regression">
         <parameter name="browser" value="firefox"/>
         <classes>
-            <class name="Scripts.TestLogin"/>
-            <class name="Scripts.TestDeleteMyPost"/>
-            <class name="Scripts.TestNewPost"/>
-<!--            <class name="Scripts.TestMyPost"/>-->
+<!--            <class name="Scripts.Trainer.TestTrainerSignup"/>-->
+            <class name="Scripts.Trainer.TestTrainerLogin"/>
+            <class name="Scripts.Trainer.TestTrainerDeleteMyPost"/>
+            <class name="Scripts.Trainer.TestTrainerNewPost"/>
+            <class name="Scripts.Trainer.TestTrainerEditMyPost"/>
+
         </classes>
     </test>
 </suite>

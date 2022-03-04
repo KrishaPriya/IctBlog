@@ -1,30 +1,28 @@
-package Scripts;
+package Scripts.Trainer;
 
 import Constants.AutomationConstants;
 import PageObjects.LoginPage;
-import PageObjects.MyPostPage;
+import PageObjects.Trainer.TrainerMyPostPage;
+import Scripts.TestBase;
 import Utilities.ExcelUtility;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
-import java.util.List;
 
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
 
-public class TestDeleteMyPost extends TestBase {
-    MyPostPage objMyPost;
+public class TestTrainerDeleteMyPost extends TestBase {
+    TrainerMyPostPage objMyPost;
     LoginPage objLogin;
 
     @Test(priority = 0)
-    public void verifyExistingPostEmpty() throws InterruptedException, IOException {
+    public void deleteAllExistingPostWithSpaceCategory() throws InterruptedException, IOException {
         loginToUser();
         // Go to new post.
-        objMyPost = new MyPostPage(driver);
+        objMyPost = new TrainerMyPostPage(driver);
         objMyPost.deleteAllPost();
 
     }

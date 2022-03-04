@@ -1,4 +1,4 @@
-package PageObjects;
+package PageObjects.Trainer;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class MyPostPage {
+public class TrainerMyPostPage {
     private static final long WEBDRIVER_WAIT_TIME_SEC = 3000;
     WebDriver driver;
     @FindBy(xpath="/html/body/app-root/app-trainerpost/app-header/nav/div/div/ul/li[5]/a")
@@ -38,11 +38,17 @@ public class MyPostPage {
     private WebElement Delete;
 
 
+
+
+    @FindBy(xpath="/html/body/app-root/app-mypost/div[2]/li[1]/div/div/div/button[1]")
+    private WebElement editBtn;
+
+
     @FindBy(xpath = "/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[10]/a")
     private WebElement logout;
 
 
-    public  MyPostPage(WebDriver driver)
+    public TrainerMyPostPage(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver,this);
@@ -87,7 +93,7 @@ public class MyPostPage {
         while (button != null){
             // scroll to button.
             System.out.println("Found Delete Button "+ button.getText());
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(2000);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(3000);
 
             // Delete action
             button.click();
@@ -111,6 +117,7 @@ public class MyPostPage {
             if (w.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("button")))) == null){
                 System.out.println("page refresh failed...");
             }else{
+                Thread.sleep(2000);
                 button = getNextDeleteButton();
             }
         }
@@ -131,5 +138,34 @@ public class MyPostPage {
 
     public void clickOnNewPost(){
         driver.findElement(By.xpath("/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[5]/a")).click();
+    }
+
+    public void  editMyPost() throws InterruptedException {
+        Thread.sleep(WEBDRIVER_WAIT_TIME_SEC);
+        WebElement button = getNextEditButton();
+        if (button != null) {
+            // scroll to button.
+
+            System.out.println("Found Edit Button " + button.getText());
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);
+
+            Thread.sleep(1000);
+            // Edit action
+            button.click();
+            Thread.sleep(2000);
+
+        }
+    }
+
+    private WebElement getNextEditButton(){
+        List<WebElement> buttons = driver.findElements(By.tagName("button"));
+        int count1 =0;
+        for(WebElement button : buttons){
+            if(button.getText().equals("Edit")){
+                return button;
+            }
+        }
+
+        return null;
     }
 }

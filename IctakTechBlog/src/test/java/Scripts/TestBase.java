@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
     public static Properties prop = null;
-    WebDriver driver;
+    public WebDriver driver;
     String driverpath = "/Users/naveenmurthy/Documents/Priya/FirefoxWebDriver/geckodriver";
 
     public static void TestBase() {

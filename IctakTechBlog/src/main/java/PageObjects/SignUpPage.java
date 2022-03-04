@@ -42,6 +42,11 @@ public class SignUpPage {
     @FindBy(xpath="//*[@id=\"sign\"]/h3")
     private WebElement signupHeader;
 
+    @FindBy(xpath="//*[@id=\"sign\"]/small[3]/b")
+    private WebElement usernameValidMsg;
+    @FindBy(xpath="//*[@id=\"sign\"]/small[4]/b ")
+    private WebElement passwordValidMsg;
+
     //Initialization
     public  SignUpPage(WebDriver driver)
     {
@@ -89,6 +94,19 @@ public class SignUpPage {
         return actSignUpTitle;
     }
 
+    public String validUserText()
+    {
+        String usernameTextValidMsg=usernameValidMsg.getText();
+        return usernameTextValidMsg;
+
+    }
+
+    public String validPasswordText()
+    {
+        String passwordTextValidMsg=passwordValidMsg.getText();
+        return passwordTextValidMsg;
+
+    }
 
 
 }

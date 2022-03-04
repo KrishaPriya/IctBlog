@@ -1,15 +1,13 @@
-package PageObjects;
+package PageObjects.Trainer;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NewPostPage {
+public class TrainerNewPostPage {
     WebDriver driver;
 
     @FindBy(id="exampleInputEmail1")
@@ -34,7 +32,7 @@ public class NewPostPage {
     private WebElement Logout;
 
 
-    public NewPostPage(WebDriver driver)
+    public TrainerNewPostPage(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver,this);
@@ -57,7 +55,8 @@ public class NewPostPage {
         Post.sendKeys(postdesc);
     }
     public void clickSubmit() throws InterruptedException {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Submit);Thread.sleep(500);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Submit);
+        Thread.sleep(500);
         Submit.click();
     }
 
