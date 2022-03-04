@@ -1,11 +1,15 @@
 package PageObjects;
 
 
+import Constants.AutomationConstants;
+import Utilities.ExcelUtility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.IOException;
 
 
 public class LoginPage {
@@ -83,13 +87,14 @@ public class LoginPage {
 
     }
 
-
-
     public String validationAssertUsername() {
         String usernameValidation = userNameTextTitle.getText();
         return usernameValidation;
     }
 
-
-
+    public void loginToUser(String userName, String password) throws InterruptedException, IOException {
+        this.setUserName(userName);
+        this.setPassword(password);
+        this.clickLogin();
+    }
 }

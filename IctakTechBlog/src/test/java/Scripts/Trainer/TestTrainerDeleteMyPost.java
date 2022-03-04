@@ -19,7 +19,7 @@ public class TestTrainerDeleteMyPost extends TestBase {
     LoginPage objLogin;
 
     @Test(priority = 0)
-    public void deleteAllExistingPostWithSpaceCategory() throws InterruptedException, IOException {
+    public void deleteAllExistingPost() throws InterruptedException, IOException {
         loginToUser();
         // Go to new post.
         objMyPost = new TrainerMyPostPage(driver);
@@ -37,11 +37,11 @@ public class TestTrainerDeleteMyPost extends TestBase {
         objLogin = new LoginPage(driver);
         Thread.sleep(WEBDRIVER_WAIT_TIME);
         objLogin.selectLoginDropdown();
+
         String username = ExcelUtility.getCellData(0, 0);
         String password = ExcelUtility.getCellData(0, 1);
-        objLogin.setUserName(username);
-        objLogin.setPassword(password);
-        objLogin.clickLogin();
+
+        objLogin.loginToUser(username,password);
 
         // Check the url
         String strUrl = driver.getCurrentUrl();

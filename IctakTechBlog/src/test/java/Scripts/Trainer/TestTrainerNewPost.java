@@ -83,9 +83,7 @@ public class TestTrainerNewPost extends TestBase {
         objLogin.selectLoginDropdown();
         String username = ExcelUtility.getCellData(0, 0);
         String password = ExcelUtility.getCellData(0, 1);
-        objLogin.setUserName(username);
-        objLogin.setPassword(password);
-        objLogin.clickLogin();
+        objLogin.loginToUser(username,password);
 
         // Check the url
         String strUrl = driver.getCurrentUrl();

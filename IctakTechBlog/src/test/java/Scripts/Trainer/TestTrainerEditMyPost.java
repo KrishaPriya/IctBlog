@@ -54,16 +54,14 @@ public class TestTrainerEditMyPost extends TestBase {
 
   }
 
-    public void loginToUser() throws IOException {
+    public void loginToUser() throws IOException, InterruptedException {
         driver.navigate().refresh();
         Actions act=new Actions(driver);
         objLogin=new LoginPage(driver);
         objLogin.selectLoginDropdown();
         String username= ExcelUtility.getCellData(0,0);
         String password=ExcelUtility.getCellData(0,1);
-        objLogin.setUserName(username);
-        objLogin.setPassword(password);
-        objLogin.clickLogin();
+        objLogin.loginToUser(username,password);
         String expectedTitle= AutomationConstants.HOMEPAGETITLE;
         String actualTitle=driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);

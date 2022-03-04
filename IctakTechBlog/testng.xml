@@ -6,6 +6,9 @@
         <parameter name="browser" value="firefox"/>
         <classes>
 <!--            <class name="Scripts.Trainer.TestTrainerSignup"/>-->
+
+
+            <!--Trainer Test Suite-->
             <class name="Scripts.Trainer.TestTrainerLogin"/>
             <class name="Scripts.Trainer.TestTrainerDeleteMyPost"/>
             <class name="Scripts.Trainer.TestTrainerNewPost"/>

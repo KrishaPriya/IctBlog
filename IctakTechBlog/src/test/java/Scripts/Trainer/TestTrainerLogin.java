@@ -43,10 +43,7 @@ public class TestTrainerLogin extends TestBase {
         objLogin.selectLoginDropdown();
         String username = ExcelUtility.getCellData(4, 0);
         String password = ExcelUtility.getCellData(4, 1);
-        objLogin.setUserName(username);
-        objLogin.setPassword(password);
-
-        objLogin.clickLogin();
+        objLogin.loginToUser(username,password);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
 
@@ -67,10 +64,7 @@ public class TestTrainerLogin extends TestBase {
         Thread.sleep(WEBDRIVER_WAIT_TIME);
         String username = ExcelUtility.getCellData(1, 0);
         String password = ExcelUtility.getCellData(1, 1);
-        objLogin.setUserName(username);
-        objLogin.setPassword(password);
-
-        objLogin.clickLogin();
+        objLogin.loginToUser(username,password);
 
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
@@ -86,9 +80,8 @@ public class TestTrainerLogin extends TestBase {
         Thread.sleep(WEBDRIVER_WAIT_TIME);
         String username = ExcelUtility.getCellData(0, 0);
         String password = ExcelUtility.getCellData(0, 1);
-        objLogin.setUserName(username);
-        objLogin.setPassword(password);
-        objLogin.clickLogin();
+        objLogin.loginToUser(username,password);
+
         // Check the url
         String strUrl = driver.getCurrentUrl();
         Assert.assertEquals(strUrl, "http://64.227.132.106/mypost");
