@@ -5,8 +5,12 @@
     <test thread-count="5" name="Regression">
         <parameter name="browser" value="firefox"/>
         <classes>
-<!--            <class name="Scripts.Trainer.TestTrainerSignup"/>-->
-
+            <!-- Admin Test Suite-->
+            <class name="Scripts.Admin.TestAdminLogin"/>
+            <class name="Scripts.Admin.TestAdminAddNewPost"/>
+            <class name="Scripts.Admin.TestAdminAllPostPage"/>
+            <class name="Scripts.Admin.TestAdminMyPostPage"/>
+            <class name="Scripts.Admin.TestPostApprovalAndReject"/>
 
             <!--Trainer Test Suite-->
             <class name="Scripts.Trainer.TestTrainerLogin"/>

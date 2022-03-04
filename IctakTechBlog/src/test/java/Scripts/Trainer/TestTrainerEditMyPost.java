@@ -33,9 +33,9 @@ public class TestTrainerEditMyPost extends TestBase {
 
         objEdit = new TrainerEditPost(driver);
         String url=driver.getCurrentUrl();
-        String title=ExcelUtility.getCellData(10,3);
-        String image=ExcelUtility.getCellData(10,4);
-        String post=ExcelUtility.getCellData(10,5);
+        String title=ExcelUtility.getTrainerCellData(10,3);
+        String image=ExcelUtility.getTrainerCellData(10,4);
+        String post=ExcelUtility.getTrainerCellData(10,5);
         objEdit.setTitle(title);
         objEdit.setImage(image);
         objEdit.setPostDesc(post);
@@ -59,8 +59,8 @@ public class TestTrainerEditMyPost extends TestBase {
         Actions act=new Actions(driver);
         objLogin=new LoginPage(driver);
         objLogin.selectLoginDropdown();
-        String username= ExcelUtility.getCellData(0,0);
-        String password=ExcelUtility.getCellData(0,1);
+        String username= ExcelUtility.getTrainerCellData(0,0);
+        String password=ExcelUtility.getTrainerCellData(0,1);
         objLogin.loginToUser(username,password);
         String expectedTitle= AutomationConstants.HOMEPAGETITLE;
         String actualTitle=driver.getTitle();

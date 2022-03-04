@@ -97,4 +97,11 @@ public class LoginPage {
         this.setPassword(password);
         this.clickLogin();
     }
+
+    public void loginAsAdmin() throws InterruptedException, IOException{
+        this.selectLoginDropdown();
+        String username = ExcelUtility.getAdminCellData(0, 0);
+        String password = ExcelUtility.getAdminCellData(0, 1);
+        this.loginToUser(username,password);
+    }
 }

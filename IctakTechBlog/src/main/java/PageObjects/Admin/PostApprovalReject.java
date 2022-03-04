@@ -47,6 +47,10 @@ public class PostApprovalReject {
     @FindBy(xpath = "/html/body/app-root/app-usernewpost/form/button")
     private WebElement sendforapproval;
 
+    @FindBy(xpath = "/html/body/app-root/app-pendingapproval/div[1]/h2")
+    private WebElement title;
+
+
 
     public PostApprovalReject(WebDriver driver) {
         this.driver = driver;
@@ -69,6 +73,10 @@ public class PostApprovalReject {
     public void enterimageurluser(String imageurl) {
         txtimageurluser.clear();
         txtimageurluser.sendKeys(imageurl);
+    }
+
+    public String getTitleOfPage(){
+        return title.getText();
     }
 
 

@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 public class TestBase {
     public static Properties prop = null;
     public WebDriver driver;
+//    String driverPath = ".//Drivers/chromedriver.exe";
     String driverpath = "/Users/naveenmurthy/Documents/Priya/FirefoxWebDriver/geckodriver";
 
     public static void TestBase() {

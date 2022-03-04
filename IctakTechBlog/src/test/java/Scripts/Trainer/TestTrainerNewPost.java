@@ -50,14 +50,14 @@ public class TestTrainerNewPost extends TestBase {
             // update new post
             objNewPost=new TrainerNewPostPage(driver);
             String url = driver.getCurrentUrl();
-            String Title=ExcelUtility.getCellData(i,0);
-            String Image=ExcelUtility.getCellData(i,1);
-            String Post=ExcelUtility.getCellData(i,2);
+            String Title=ExcelUtility.getTrainerCellData(i,0);
+            String Image=ExcelUtility.getTrainerCellData(i,1);
+            String Post=ExcelUtility.getTrainerCellData(i,2);
             objNewPost.setTitle(Title);
             objNewPost.setImage(Image);
             objNewPost.setCategory();
             objNewPost.setPost(Post);
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             objNewPost.clickSubmit();
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
@@ -81,8 +81,8 @@ public class TestTrainerNewPost extends TestBase {
         objLogin = new LoginPage(driver);
         Thread.sleep(WEBDRIVER_WAIT_TIME);
         objLogin.selectLoginDropdown();
-        String username = ExcelUtility.getCellData(0, 0);
-        String password = ExcelUtility.getCellData(0, 1);
+        String username = ExcelUtility.getTrainerCellData(0, 0);
+        String password = ExcelUtility.getTrainerCellData(0, 1);
         objLogin.loginToUser(username,password);
 
         // Check the url

@@ -14,7 +14,7 @@ public class ExcelUtility {
     private static XSSFCell cell;
 
 
-    public static String getCellData(int RowNum, int ColNum) throws IOException {
+    public static String getTrainerCellData(int RowNum, int ColNum) throws IOException {
         FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/TestData.xlsx");
         excelWbook = new XSSFWorkbook(ExcelFile);
         excelWSheet = excelWbook.getSheetAt(0);
@@ -22,12 +22,22 @@ public class ExcelUtility {
     }
 
 
-    public static String getCellDataDateFormat(int RowNum, int ColNum) throws IOException {
+    public static String getCellDataFormat(int RowNum, int ColNum) throws IOException {
         FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/TestData.xlsx");
         excelWbook = new XSSFWorkbook(ExcelFile);
         excelWSheet = excelWbook.getSheetAt(0);
         DataFormatter formatter = new DataFormatter();
         XSSFCell cell = excelWSheet.getRow(RowNum).getCell(ColNum);
+        return formatter.formatCellValue(cell);
+    }
+
+    public static String getAdminCellData(int RowNum, int ColNum) throws IOException {
+        // Open the Excel file
+        FileInputStream ExcelFile = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/TestData.xlsx");
+        excelWbook = new XSSFWorkbook(ExcelFile);
+        excelWSheet = excelWbook.getSheetAt(1);
+        DataFormatter formatter = new DataFormatter();
+        cell= excelWSheet.getRow(RowNum).getCell(ColNum);
         return formatter.formatCellValue(cell);
     }
 }

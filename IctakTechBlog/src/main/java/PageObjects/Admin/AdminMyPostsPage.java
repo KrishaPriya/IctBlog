@@ -37,7 +37,7 @@ public class AdminMyPostsPage {
     private WebElement btnsubmitnewpost;
     @FindBy(xpath = "/html/body/app-root/app-editpost/form/button")
     private WebElement editMypostbtnsubmitnewpost;
-    @FindBy(xpath = "/html/body/app-root/app-admin/div[1]/h2")
+    @FindBy(xpath = "/html/body/app-root/app-mypost/div[1]/h2")
     private WebElement MyPosttitle;
 
 
@@ -46,9 +46,12 @@ public class AdminMyPostsPage {
 
     @FindBy(xpath = "/html/body/app-root/app-mypost/div[2]/li/div/div/div/button[1]")
     private WebElement editMypost;
-    @FindBy(xpath = "/html/body/app-root/app-mypost/div[2]/li/div/div/div/button[2]")
 
+    @FindBy(xpath = "/html/body/app-root/app-mypost/div[2]/li/div/div/div/button[2]")
     private WebElement deleteMypost;
+
+    @FindBy(xpath = "/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[10]/a")
+    private WebElement logout;
 
     public AdminMyPostsPage(WebDriver driver) {
         this.driver = driver;
@@ -171,5 +174,9 @@ public class AdminMyPostsPage {
         else
             return false;
 
+    }
+    public void logout()
+    {
+        logout.click();
     }
 }

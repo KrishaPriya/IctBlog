@@ -115,9 +115,11 @@ public class ActionsPage {
 
 
     //click submit in new post
-    public void btnsubmit() {
-
-        btnsubmitnewpost.sendKeys(Keys.RETURN);
+    public void btnsubmit() throws InterruptedException {
+        JavascriptExecutor ijs = (JavascriptExecutor) driver;
+        ijs.executeScript("arguments[0].scrollIntoView(true);", btnsubmitnewpost);
+        Thread.sleep(2000);
+        btnsubmitnewpost.click();
     }
 
     //click submit in new post(INVALID DATA)

@@ -18,9 +18,9 @@ public class TestTrainerSignup extends TestBase {
       Actions act=new Actions(driver);
       objSignUp = new SignUpPage(driver);
       objSignUp.selectSignUpDrop();
-      String User=ExcelUtility.getCellData(6,0);
-      String Email=ExcelUtility.getCellData(6,1);
-      String Password=ExcelUtility.getCellData(6,2);
+      String User=ExcelUtility.getTrainerCellData(6,0);
+      String Email=ExcelUtility.getTrainerCellData(6,1);
+      String Password=ExcelUtility.getTrainerCellData(6,2);
       objSignUp.setName(User);
       objSignUp.setAccount();
       objSignUp.setQualification();
@@ -41,9 +41,9 @@ public class TestTrainerSignup extends TestBase {
       Actions act = new Actions(driver);
       objSignUp = new SignUpPage(driver);
       objSignUp.selectSignUpDrop();
-      String User = ExcelUtility.getCellData(7, 0);
-      String Email = ExcelUtility.getCellData(7, 1);
-      String Password = ExcelUtility.getCellData(7, 2);
+      String User = ExcelUtility.getTrainerCellData(7, 0);
+      String Email = ExcelUtility.getTrainerCellData(7, 1);
+      String Password = ExcelUtility.getTrainerCellData(7, 2);
       objSignUp.setName(User);
       objSignUp.setAccount();
       objSignUp.setQualification();
@@ -64,9 +64,9 @@ public class TestTrainerSignup extends TestBase {
       Actions act=new Actions(driver);
       objSignUp = new SignUpPage(driver);
       objSignUp.selectSignUpDrop();
-      String User=ExcelUtility.getCellData(8,0);
-      String Email=ExcelUtility.getCellData(8,1);
-      String Password=ExcelUtility.getCellData(8,2);
+      String User=ExcelUtility.getTrainerCellData(8,0);
+      String Email=ExcelUtility.getTrainerCellData(8,1);
+      String Password=ExcelUtility.getTrainerCellData(8,2);
       objSignUp.setName(User);
       objSignUp.setAccount();
       objSignUp.setQualification();

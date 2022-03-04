@@ -23,6 +23,12 @@ public class AllPostsPage {
     @FindBy(xpath = "//a[contains(text(),'New post')]")
     private WebElement newpostlink;
 
+    @FindBy(xpath = "//a[contains(text(),'My posts')]")
+    private WebElement myPost;
+
+    @FindBy(xpath = "//a[contains(text(),'Pending Approvals')]")
+    private WebElement pendingApprovals;
+
     @FindBy(xpath = "//input[@id='exampleInputEmail1']")
     private WebElement txttitle;
 
@@ -58,6 +64,8 @@ public class AllPostsPage {
     @FindBy(xpath = "/html/body/app-root/app-admin/div[2]/li[5]/div/div/div/button[2]")
     private WebElement deleteallpost;
 
+    @FindBy(xpath = "/html/body/app-root/app-admin/app-header/nav/div/div/ul/li[11]/a")
+    private WebElement logout;
 
     public AllPostsPage(WebDriver driver) {
         this.driver = driver;
@@ -68,11 +76,19 @@ public class AllPostsPage {
 
     //selecting from Actions menu
     public void selectactionsdropdown() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         actiondrpdown.click();
         Actions act = new Actions(driver);
         act.click(newpostlink).perform();
 
+    }
+
+    //selecting from Actions menu
+    public void selectPendingApprvalDropDown() throws InterruptedException {
+        Thread.sleep(2000);
+        actiondrpdown.click();
+        Actions act = new Actions(driver);
+        act.click(pendingApprovals).perform();
     }
 
     //entering title in new post
@@ -138,6 +154,10 @@ public class AllPostsPage {
         txtpost.sendKeys(post);
     }
 
+    public void clickMyPosts(){
+        myPost.click();
+    }
+
     //entering post in text area when editing
     public void editenterallpost(String post) {
         editallposttxtpost.clear();
@@ -187,7 +207,10 @@ public class AllPostsPage {
         deleteallpost.click();
         Thread.sleep(4000);
 
-
+    }
+    public void logout()
+    {
+        logout.click();
     }
 
 }
