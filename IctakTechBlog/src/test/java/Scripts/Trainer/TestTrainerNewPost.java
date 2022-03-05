@@ -36,6 +36,7 @@ public class TestTrainerNewPost extends TestBase {
     }
 
 
+
     @Test(priority = 1)
     public void verifyNewPost() throws IOException, InterruptedException {
         loginToUser();
@@ -94,7 +95,6 @@ public class TestTrainerNewPost extends TestBase {
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle, actualTitle);
         Thread.sleep(WEBDRIVER_WAIT_TIME);
-
     }
 
 

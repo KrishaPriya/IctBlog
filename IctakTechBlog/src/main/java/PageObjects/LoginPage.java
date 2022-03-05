@@ -32,7 +32,7 @@ public class LoginPage {
     @FindBy(xpath = "//*[@id=\"log\"]/small[1]")
     private WebElement userNameTextTitle;
 
-    @FindBy(id = "/html/body/app-root/app-login/form/small[2]")
+    @FindBy(xpath = "//*[@id=\"log\"]/small[2]")
     private WebElement pwdTxtTitle;
 
     @FindBy(xpath = "//*[@id=\"nav\"]")
@@ -81,9 +81,9 @@ public class LoginPage {
     }
 
 
-    public String validationAssertPassword() {
+    public String passwordValidation() {
         String pwdValidation= pwdTxtTitle.getText();
-        return pwdValidation;
+       return pwdValidation;
 
     }
 

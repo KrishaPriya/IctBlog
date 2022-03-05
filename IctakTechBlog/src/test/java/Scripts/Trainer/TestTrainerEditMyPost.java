@@ -49,11 +49,6 @@ public class TestTrainerEditMyPost extends TestBase {
 
   }
 
-  @Test(priority=2)
-  public void verifyEditMyPostWithoutContents(){
-
-  }
-
     public void loginToUser() throws IOException, InterruptedException {
         driver.navigate().refresh();
         Actions act=new Actions(driver);

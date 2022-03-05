@@ -20,14 +20,14 @@ import static Scripts.Utils.WEBDRIVER_WAIT_TIME_SEC;
 public class TestAdminAddNewPost extends TestBase {
     LoginPage login;
     AllPostsPage allPostsPage;
-    TrainerNewPostPage objNewPost;
+  //  TrainerNewPostPage objNewPost;
     ActionsPage actionsPage;
 
     @AfterTest
     void afterTest() {
         login = null;
         allPostsPage = null;
-        objNewPost = null;
+        actionsPage = null;
     }
 
     @Test(priority=1)

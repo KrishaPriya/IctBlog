@@ -6,18 +6,21 @@
         <parameter name="browser" value="firefox"/>
         <classes>
             <!-- Admin Test Suite-->
-            <class name="Scripts.Admin.TestAdminLogin"/>
-            <class name="Scripts.Admin.TestAdminAddNewPost"/>
-            <class name="Scripts.Admin.TestAdminAllPostPage"/>
-            <class name="Scripts.Admin.TestAdminMyPostPage"/>
-            <class name="Scripts.Admin.TestPostApprovalAndReject"/>
+<!--            <class name="Scripts.Admin.TestAdminLogin"/>-->
+<!--            <class name="Scripts.Admin.TestAdminAddNewPost"/>-->
+<!--            <class name="Scripts.Admin.TestAdminAllPostPage"/>-->
+<!--            <class name="Scripts.Admin.TestAdminMyPostPage"/>-->
+<!--            <class name="Scripts.Admin.TestPostApprovalAndReject"/>-->
 
             <!--Trainer Test Suite-->
+
+            <class name="Scripts.Trainer.TestTrainerSignup"/>
             <class name="Scripts.Trainer.TestTrainerLogin"/>
             <class name="Scripts.Trainer.TestTrainerDeleteMyPost"/>
             <class name="Scripts.Trainer.TestTrainerNewPost"/>
             <class name="Scripts.Trainer.TestTrainerEditMyPost"/>
-
+            <class name="Scripts.Trainer.TestTrainerEditPostInAdmin"/>
+            <class name="Scripts.Trainer.TestTrainerDeletePostInAdmin"/>
         </classes>
     </test>
 </suite>

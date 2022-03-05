@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import java.lang.ref.PhantomReference;
+import java.util.Random;
 
 public class SignUpPage {
     WebDriver driver;
@@ -16,7 +16,7 @@ public class SignUpPage {
 
 
 
-    @FindBy(xpath="/html/body/app-root/app-home/app-header/nav/div/div/ul/li[11]/a")
+    @FindBy(xpath="/html/body/app-root/app-home/app-header/nav/div/div/ul/li[11]/a/img")
     private WebElement selOptions;
     @FindBy(xpath="/html/body/app-root/app-home/app-header/nav/div/div/ul/li[11]/ul/li[2]/a")
     private WebElement signUp;
@@ -66,26 +66,42 @@ public class SignUpPage {
     public void setName(String strName){
         Name.sendKeys(strName);
     }
-    public void setAccount(){
+
+    public void setTrainerAccount(){
         Select acctDrp=new Select(Account);
         acctDrp.selectByIndex(1);
     }
+
+    public void setUserAccount(){
+        Select acctDrp=new Select(Account);
+        acctDrp.selectByIndex(0);
+    }
+
     public void setQualification(){
         Select qualifyDrp=new Select(Qualification);
         qualifyDrp.selectByIndex(2);
     }
+
     public void setEmail(String strEmail){
+        Email.clear();
         Email.sendKeys(strEmail);
     }
     public void setPassword(String strPassword){
+        Password.clear();
         Password.sendKeys(strPassword);
+    }
 
+    public void clearTextFields(){
+        Password.clear();
+        Email.clear();
+        Name.clear();
     }
 
     public void clickSubmit(){
-        Actions action = new Actions(driver);
-        action.moveToElement(Submit).click().perform();
-        //Submit.click();
+      //  Actions action = new Actions(driver);
+       // action.moveToElement(Submit).click().perform();
+
+        Submit.click();
     }
 
     public String setSignupHeader()
@@ -108,5 +124,20 @@ public class SignUpPage {
 
     }
 
+
+    public void enterNewRandomMailId(){
+        Email.click();
+        Random randomGenerator = new Random();
+        int randomInt = randomGenerator.nextInt(1000);
+        Email.sendKeys("username"+ randomInt +"@gmail.com");
+    }
+
+    public Boolean qualificationIsDisplayed(){
+        try {
+            return Qualification.isDisplayed();
+        }catch (Exception e){
+            return false;
+        }
+    }
 
 }
