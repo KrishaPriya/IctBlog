@@ -1,9 +1,9 @@
 package Scripts.Trainer;
 
 import Constants.AutomationConstants;
-import PageObjects.Trainer.TrainerEditPost;
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
+import PageObjects.Trainer.TrainerEditPost;
 import PageObjects.Trainer.TrainerMyPostPage;
 import Scripts.TestBase;
 import Utilities.ExcelUtility;
@@ -22,44 +22,65 @@ public class TestTrainerEditMyPost extends TestBase {
     TrainerEditPost objEdit;
     HomePage objHome;
 
-  @Test(priority=1)
+    @Test(priority = 1)
     public void verifyEditMyPost() throws IOException, InterruptedException {
         loginToUser();
-
         Thread.sleep(WEBDRIVER_WAIT_TIME);
-
-        objMyPost=new TrainerMyPostPage(driver);
+        objMyPost = new TrainerMyPostPage(driver);
         objMyPost.editMyPost();
-
         objEdit = new TrainerEditPost(driver);
-        String url=driver.getCurrentUrl();
-        String title=ExcelUtility.getTrainerCellData(10,3);
-        String image=ExcelUtility.getTrainerCellData(10,4);
-        String post=ExcelUtility.getTrainerCellData(10,5);
+        String url = driver.getCurrentUrl();
+        String title = ExcelUtility.getTrainerCellData(10, 3);
+        String image = ExcelUtility.getTrainerCellData(10, 4);
+        String post = ExcelUtility.getTrainerCellData(10, 5);
         objEdit.setTitle(title);
         objEdit.setImage(image);
         objEdit.setPostDesc(post);
         objEdit.setSubmit();
-        String alertMessage=driver.switchTo().alert().getText();
-        String expectedAlert=AutomationConstants.EDITEDALERT;
-        Assert.assertEquals(expectedAlert,alertMessage);
-        Alert al=driver.switchTo().alert();
+        String alertMessage = driver.switchTo().alert().getText();
+        String expectedAlert = AutomationConstants.EDITED_ALERT;
+        Assert.assertEquals(expectedAlert, alertMessage);
+        Alert al = driver.switchTo().alert();
         al.accept();
         Thread.sleep(WEBDRIVER_WAIT_TIME);
 
-  }
+    }
+
+    @Test(priority = 2)
+    public void verifyEditMyPostWithInvalidData() throws InterruptedException, IOException {
+
+        objHome = new HomePage(driver);
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
+        objHome.clickOnMyPost();
+        Thread.sleep(1000);
+        objMyPost = new TrainerMyPostPage(driver);
+        objMyPost.editMyPost();
+        objEdit = new TrainerEditPost(driver);
+        String title = "HI";
+        String image = " ";
+        String post = "";
+        objEdit.setTitle(title);
+        objEdit.setImage(image);
+        objEdit.setPostDesc(post);
+        objEdit.setSubmit();
+        Thread.sleep(2000);
+        boolean value = objEdit.btnSubmitNotEnabled();
+        Assert.assertEquals(value, false);
+        Thread.sleep(1000);
+
+    }
 
     public void loginToUser() throws IOException, InterruptedException {
         driver.navigate().refresh();
-        Actions act=new Actions(driver);
-        objLogin=new LoginPage(driver);
+        Actions act = new Actions(driver);
+        objLogin = new LoginPage(driver);
         objLogin.selectLoginDropdown();
-        String username= ExcelUtility.getTrainerCellData(0,0);
-        String password=ExcelUtility.getTrainerCellData(0,1);
-        objLogin.loginToUser(username,password);
-        String expectedTitle= AutomationConstants.HOMEPAGETITLE;
-        String actualTitle=driver.getTitle();
-        Assert.assertEquals(expectedTitle,actualTitle);
+        String username = ExcelUtility.getTrainerCellData(0, 0);
+        String password = ExcelUtility.getTrainerCellData(0, 1);
+        objLogin.loginToUser(username, password);
+        String expectedTitle = AutomationConstants.HOME_PAGE_TITLE;
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(expectedTitle, actualTitle);
     }
 
 }

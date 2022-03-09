@@ -15,12 +15,14 @@ import java.util.List;
 public class TrainerMyPostPage {
     private static final long WEBDRIVER_WAIT_TIME_SEC = 3000;
     WebDriver driver;
-    @FindBy(xpath="/html/body/app-root/app-trainerpost/app-header/nav/div/div/ul/li[5]/a")
-    public WebElement newpost;
+    //@FindBy(xpath="/html/body/app-root/app-trainerpost/app-header/nav/div/div/ul/li[5]/a")
+    //private WebElement newpost;
+
+   @FindBy(xpath="/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[5]/a")
+   public WebElement newPost;
 
     @FindBy(xpath="/html/body/app-root/app-mypost/div[2]/li[1]/div/div/div/button[1]")
     private WebElement Edit;
-
 
     @FindBy(xpath="//*[@id=\"exampleInputEmail1\"]")
     private WebElement Title;
@@ -39,7 +41,6 @@ public class TrainerMyPostPage {
 
 
 
-
     @FindBy(xpath="/html/body/app-root/app-mypost/div[2]/li[1]/div/div/div/button[1]")
     private WebElement editBtn;
 
@@ -47,6 +48,8 @@ public class TrainerMyPostPage {
     @FindBy(xpath = "/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[10]/a")
     private WebElement logout;
 
+    @FindBy(xpath = "/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[7]/a")
+    private WebElement categories;
 
     public TrainerMyPostPage(WebDriver driver)
     {
@@ -54,21 +57,25 @@ public class TrainerMyPostPage {
         PageFactory.initElements(driver,this);
     }
 
+    //for editing post
     public void clickEdit()
     {
         Edit.click();
     }
 
+    //for editing title
     public void setTitle(String strTitle)
     {
         Title.sendKeys(strTitle);
     }
 
+    //for editing image
     public void setImage(String strImage)
     {
         Image.sendKeys(strImage);
     }
 
+    //for editing post
     public void setPostDesc(String strPostDesc)
     {
         PostDesc.sendKeys(strPostDesc);
@@ -78,22 +85,36 @@ public class TrainerMyPostPage {
     {
         SubmitBtn.click();
     }
+
+    //for delete
     public void clickDelete()
     {
         Delete.click();
     }
 
+    //for logout
     public void logout()
     {
         logout.click();
     }
 
-    public void deleteAllPost() throws InterruptedException {
+    //for deleting post
+    public void deletePost() throws InterruptedException {
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",Delete);
+
+        Thread.sleep(1000);
+        Delete.click();
+    }
+
+    //for deleting all post
+    public int deleteAllPost() throws InterruptedException {
         WebElement button = getNextDeleteButton();
+        int count = 0;
         while (button != null){
+            count++;
             // scroll to button.
             System.out.println("Found Delete Button "+ button.getText());
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(3000);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(4000);
 
             // Delete action
             button.click();
@@ -122,6 +143,7 @@ public class TrainerMyPostPage {
             }
         }
 
+        return count;
     }
 
     private WebElement getNextDeleteButton(){
@@ -136,10 +158,13 @@ public class TrainerMyPostPage {
         return null;
     }
 
-    public void clickOnNewPost(){
+    //for clicking new post
+   public void clickOnNewPost(){
         driver.findElement(By.xpath("/html/body/app-root/app-mypost/app-header/nav/div/div/ul/li[5]/a")).click();
     }
 
+
+    //for clicking edit my post
     public void  editMyPost() throws InterruptedException {
         Thread.sleep(WEBDRIVER_WAIT_TIME_SEC);
         WebElement button = getNextEditButton();
@@ -167,5 +192,20 @@ public class TrainerMyPostPage {
         }
 
         return null;
+    }
+
+
+    //Select for categories from dropdown
+    public void selectCategoriesDropdown(String category) throws InterruptedException {
+        Thread.sleep(2000);
+        categories.click();
+        List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'dropdown-item')]"));
+        for (WebElement card : cards) {
+            if(card.getText().equals(category)){
+                System.out.println(card.getText());
+                card.click();
+                break;
+            }
+        }
     }
 }

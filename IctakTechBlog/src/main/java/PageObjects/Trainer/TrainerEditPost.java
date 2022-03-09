@@ -22,34 +22,49 @@ public class TrainerEditPost {
     @FindBy(xpath="/html/body/app-root/app-editpost/form/button")
     private WebElement submit;
 
-
+    //initialization
     public TrainerEditPost(WebDriver driver)
     {
         this.driver=driver;
         PageFactory.initElements(driver,this);
-
     }
 
+    //for entering title
     public void setTitle(String strTitle) throws InterruptedException {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",title);
         Thread.sleep(3000);
         title.clear();
         title.sendKeys(strTitle);
     }
+    //for entering image
     public void setImage(String strImage)
     {
         image.clear();
         image.sendKeys(strImage);
     }
+
+    //for entering post
     public void setPostDesc(String strPost)
     {
         postDesc.clear();
         postDesc.sendKeys(strPost);
     }
 
+    //for submit
     public void setSubmit() throws InterruptedException {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);" ,submit);
         Thread.sleep(2000);
         submit.click();
+    }
+    //for checking is submit is enabled
+    public boolean btnSubmitNotEnabled() throws InterruptedException {
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);" ,submit);
+        Thread.sleep(2000);
+        if(submit.isEnabled())
+            System.out.println("We got alert");
+        return false;
+
+
+
     }
 }

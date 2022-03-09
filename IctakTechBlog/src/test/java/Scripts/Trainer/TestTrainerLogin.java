@@ -8,6 +8,7 @@ import PageObjects.Trainer.TrainerMyPostPage;
 import PageObjects.Trainer.TrainerNewPostPage;
 import Scripts.TestBase;
 import Utilities.ExcelUtility;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -53,11 +54,11 @@ public class TestTrainerLogin extends TestBase {
         Assert.assertEquals(strUrl, "http://64.227.132.106/login");
         Thread.sleep(WEBDRIVER_WAIT_TIME);
 
-        String usernameAssertExpectedTitle = "This field required";
+        String usernameAssertExpectedTitle = AutomationConstants.USERNAME_ASSERTION;
         String usernameAssertActualTitle = objLogin.validationAssertUsername();
         Assert.assertEquals(usernameAssertExpectedTitle, usernameAssertActualTitle);
 
-        String passwordAssertExpectedTitle = "This field required";
+        String passwordAssertExpectedTitle = AutomationConstants.PASSWORD_ASSERTTION;
         String passwordAssertActualTitle = objLogin.passwordValidation();
         Assert.assertEquals(passwordAssertExpectedTitle, passwordAssertActualTitle);
 
@@ -78,7 +79,7 @@ public class TestTrainerLogin extends TestBase {
         Assert.assertEquals(strUrl, "http://64.227.132.106/login");
         Thread.sleep(WEBDRIVER_WAIT_TIME);
 
-        String passwordAssertExpectedTitle = "This field required";
+        String passwordAssertExpectedTitle = AutomationConstants.PASSWORD_ASSERTTION;
         String passwordAssertActualTitle = objLogin.passwordValidation();
         Assert.assertEquals(passwordAssertExpectedTitle, passwordAssertActualTitle);
     }
@@ -134,9 +135,11 @@ public class TestTrainerLogin extends TestBase {
 
         // Check the url
         String strUrl = driver.getCurrentUrl();
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
         Assert.assertEquals(strUrl, "http://64.227.132.106/mypost");
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
         // Check the title of page.
-        String expectedTitle = AutomationConstants.HOMEPAGETITLE;
+        String expectedTitle = AutomationConstants.HOME_PAGE_TITLE;
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle, actualTitle);
         Thread.sleep(WEBDRIVER_WAIT_TIME);

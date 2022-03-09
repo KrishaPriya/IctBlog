@@ -2,7 +2,9 @@ package Scripts.Trainer;
 
 
 import Constants.AutomationConstants;
-import PageObjects.*;
+import PageObjects.HomePage;
+import PageObjects.LoginPage;
+import PageObjects.SignUpPage;
 import PageObjects.Trainer.TrainerMyPostPage;
 import PageObjects.Trainer.TrainerNewPostPage;
 import Scripts.TestBase;
@@ -27,8 +29,9 @@ public class TestTrainerNewPost extends TestBase {
     TrainerMyPostPage objMyPost;
     HomePage objHomePage;
 
+
     @AfterTest
-    void afterTestDone(){
+    void afterTestDone() {
         objLogin = null;
         objMyPost = null;
         objSignUp = null;
@@ -36,18 +39,75 @@ public class TestTrainerNewPost extends TestBase {
     }
 
 
+//    @Test(priority = 0)
+//    public void AddNewPost() throws IOException, InterruptedException {
+//        loginToUser();
+//        objMyPost = new TrainerMyPostPage(driver);
+//        objMyPost.clickOnNewPost();
+//        Thread.sleep(WEBDRIVER_WAIT_TIME);
+//        objNewPost = new TrainerNewPostPage(driver);
+//        String url = driver.getCurrentUrl();
+//        String title = ExcelUtility.getTrainerCellData(16, 0);
+//        String image = ExcelUtility.getTrainerCellData(16, 1);
+//        String post = ExcelUtility.getTrainerCellData(16, 2);
+//        objNewPost.setTitle(title);
+//        objNewPost.setImage(image);
+//        objNewPost.setCategory();
+//        Thread.sleep(WEBDRIVER_WAIT_TIME);
+//        objNewPost.setPost(post);
+//        Thread.sleep(1000);
+//        objNewPost.clickSubmit();
+//        Thread.sleep(1000);
+//        String expectedMessage = "New Post Added";
+//        Thread.sleep(1000);
+//        String actualMessage = driver.switchTo().alert().getText();
+//        Thread.sleep(1000);
+//        Assert.assertEquals(expectedMessage, actualMessage);
+//        driver.switchTo().alert().accept();
+//        Thread.sleep(WEBDRIVER_WAIT_TIME);
+//
+//    }
+
+//    @Test(priority = 2)
+//    public void addNewPostWithInvalidData() throws InterruptedException, IOException {
+//        //   objHomePage=new HomePage(driver);
+//        //objHomePage.clickOnNewPost();
+//        Thread.sleep(WEBDRIVER_WAIT_TIME);
+//        //objNewPost=new TrainerNewPostPage(driver);
+//        String url = driver.getCurrentUrl();
+//        driver.get(url);
+//        Thread.sleep(WEBDRIVER_WAIT_TIME);
+//        String title = ExcelUtility.getTrainerCellData(16, 0);
+//        String image = "";
+//        String post = "";
+//        Thread.sleep(WEBDRIVER_WAIT_TIME);
+//        objNewPost.setTitle(title);
+//        objNewPost.setImage(image);
+//        objNewPost.setCategory();
+//        objNewPost.setPost(post);
+//        Thread.sleep(1000);
+//        objNewPost.clickSubmit();
+//        Thread.sleep(1000);
+//        Assert.assertFalse(objNewPost.btnSubmitNotEnabled());
+//        driver.get(url);
+//
+//    }
+
+
 
     @Test(priority = 1)
-    public void verifyNewPost() throws IOException, InterruptedException {
+    public void addingNewPost() throws IOException, InterruptedException {
         loginToUser();
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
 
         // Go to new post.
         objMyPost = new TrainerMyPostPage(driver);
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
         objMyPost.clickOnNewPost();
 
         Thread.sleep(WEBDRIVER_WAIT_TIME);
 
-        for (int i = 9; i < 12; i++) {
+        for (int i = 9; i < 11; i++) {
             // update new post
             objNewPost=new TrainerNewPostPage(driver);
             String url = driver.getCurrentUrl();
@@ -77,24 +137,42 @@ public class TestTrainerNewPost extends TestBase {
         }
     }
 
-    private void loginToUser() throws InterruptedException, IOException {
+    @Test(priority = 2)
+    public void addNewPostWithInvalidData() throws InterruptedException, IOException {
+        Thread.sleep(WEBDRIVER_WAIT_TIME);
+        objNewPost=new TrainerNewPostPage(driver);
+
+        String title = ExcelUtility.getTrainerCellData(16, 0);
+        String image = "";
+        String post = "";
+        Thread.sleep(1000);
+        objNewPost.setTitle(title);
+        objNewPost.setImage(image);
+        objNewPost.setCategory();
+        objNewPost.setPost(post);
+        //Thread.sleep(2000);
+        objNewPost.clickSubmit();
+        Thread.sleep(2000);
+        boolean value = objNewPost.btnSubmitNotEnabled();
+        Assert.assertEquals(value, false);
+       Thread.sleep(1000);
+    }
+
+
+
+    public void loginToUser() throws IOException, InterruptedException {
+        driver.navigate().refresh();
+
         Actions act = new Actions(driver);
         objLogin = new LoginPage(driver);
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
+        //Thread.sleep(500);
         objLogin.selectLoginDropdown();
         String username = ExcelUtility.getTrainerCellData(0, 0);
         String password = ExcelUtility.getTrainerCellData(0, 1);
-        objLogin.loginToUser(username,password);
-
-        // Check the url
-        String strUrl = driver.getCurrentUrl();
-        Assert.assertEquals(strUrl,"http://64.227.132.106/mypost");
-
-        // Check the title of page.
-        String expectedTitle = AutomationConstants.HOMEPAGETITLE;
+        objLogin.loginToUser(username, password);
+        String expectedTitle = AutomationConstants.HOME_PAGE_TITLE;
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle, actualTitle);
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
     }
 
 

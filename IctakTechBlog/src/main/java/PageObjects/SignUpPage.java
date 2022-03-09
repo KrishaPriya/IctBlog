@@ -54,8 +54,7 @@ public class SignUpPage {
         PageFactory.initElements(driver,this);
     }
 
-    //Actions
-
+    //for selecting signup from dropdown
     public void selectSignUpDrop()
     {
         selOptions.click();
@@ -63,40 +62,49 @@ public class SignUpPage {
         act.click(signUp).perform();
     }
 
+    //for entering name
     public void setName(String strName){
         Name.sendKeys(strName);
     }
 
+    //for selecting trainer account
     public void setTrainerAccount(){
         Select acctDrp=new Select(Account);
         acctDrp.selectByIndex(1);
     }
 
+    //for selecting user account
     public void setUserAccount(){
         Select acctDrp=new Select(Account);
         acctDrp.selectByIndex(0);
     }
 
+    //for selecting qualification from dropdown
     public void setQualification(){
         Select qualifyDrp=new Select(Qualification);
         qualifyDrp.selectByIndex(2);
     }
 
+    //for entering email
     public void setEmail(String strEmail){
         Email.clear();
         Email.sendKeys(strEmail);
     }
+
+    //for entering password
     public void setPassword(String strPassword){
         Password.clear();
         Password.sendKeys(strPassword);
     }
 
+    //for clearing textfield
     public void clearTextFields(){
         Password.clear();
         Email.clear();
         Name.clear();
     }
 
+    //click on signup submit
     public void clickSubmit(){
       //  Actions action = new Actions(driver);
        // action.moveToElement(Submit).click().perform();
@@ -104,12 +112,14 @@ public class SignUpPage {
         Submit.click();
     }
 
+    //signup heading
     public String setSignupHeader()
     {
         String actSignUpTitle=signupHeader.getText();
         return actSignUpTitle;
     }
 
+    //for validating signed up user
     public String validUserText()
     {
         String usernameTextValidMsg=usernameValidMsg.getText();
@@ -117,6 +127,7 @@ public class SignUpPage {
 
     }
 
+    //for validating password field
     public String validPasswordText()
     {
         String passwordTextValidMsg=passwordValidMsg.getText();
@@ -124,7 +135,7 @@ public class SignUpPage {
 
     }
 
-
+    //for generating random email id
     public void enterNewRandomMailId(){
         Email.click();
         Random randomGenerator = new Random();
@@ -132,6 +143,7 @@ public class SignUpPage {
         Email.sendKeys("username"+ randomInt +"@gmail.com");
     }
 
+    //for validating qualification for trainer signup
     public Boolean qualificationIsDisplayed(){
         try {
             return Qualification.isDisplayed();

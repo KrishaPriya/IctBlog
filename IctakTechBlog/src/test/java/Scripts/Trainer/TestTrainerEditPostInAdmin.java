@@ -32,14 +32,11 @@ public class TestTrainerEditPostInAdmin extends TestBase {
         login=new LoginPage(driver);
         Thread.sleep(2000);
         login.loginAsAdmin();
-
         Thread.sleep(2000);
         allPostsPage = new AllPostsPage(driver);
         String allposttext=allPostsPage.allposttext();
         Assert.assertEquals(allposttext,"All Posts");
-
         allPostsPage.editFirstPostByUser("krishna");
-
         Thread.sleep(5000);
         objEdit = new TrainerEditPost(driver);
         String url=driver.getCurrentUrl();
@@ -51,7 +48,7 @@ public class TestTrainerEditPostInAdmin extends TestBase {
         objEdit.setPostDesc(post);
         objEdit.setSubmit();
         String alertMessage=driver.switchTo().alert().getText();
-        String expectedAlert= AutomationConstants.EDITEDALERT;
+        String expectedAlert= AutomationConstants.EDITED_ALERT;
         Assert.assertEquals(expectedAlert,alertMessage);
         Alert al=driver.switchTo().alert();
         al.accept();

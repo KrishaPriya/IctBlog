@@ -12,26 +12,49 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
-
 public class TestTrainerDeleteMyPost extends TestBase {
     TrainerMyPostPage objMyPost;
     LoginPage objLogin;
 
-    @Test(priority = 0)
+
+  @Test(priority=0)
+  public void deletePost() throws IOException, InterruptedException {
+      loginToUser();
+      Thread.sleep(2000);
+      objMyPost=new TrainerMyPostPage(driver);
+      Thread.sleep(2000);
+      int count = objMyPost.deleteAllPost();
+
+  }
+
+    /* @Test(priority = 0)
     public void deleteAllExistingPost() throws InterruptedException, IOException {
         loginToUser();
         // Go to new post.
         objMyPost = new TrainerMyPostPage(driver);
         objMyPost.deleteAllPost();
-
     }
 
+
+    */
     @AfterTest
     void afterTestDone(){
         objMyPost = null;
     }
 
+    public void loginToUser() throws IOException, InterruptedException {
+        driver.navigate().refresh();
+        Actions act=new Actions(driver);
+        objLogin=new LoginPage(driver);
+        objLogin.selectLoginDropdown();
+        String username= ExcelUtility.getTrainerCellData(0,0);
+        String password=ExcelUtility.getTrainerCellData(0,1);
+        objLogin.loginToUser(username,password);
+        String expectedTitle= AutomationConstants.HOME_PAGE_TITLE;
+        String actualTitle=driver.getTitle();
+        Assert.assertEquals(expectedTitle,actualTitle);
+    }
+/*
     private void loginToUser() throws InterruptedException, IOException {
         Actions act = new Actions(driver);
         objLogin = new LoginPage(driver);

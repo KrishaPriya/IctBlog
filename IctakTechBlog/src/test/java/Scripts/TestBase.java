@@ -34,7 +34,7 @@ public class TestBase {
     @BeforeClass
     public void onSetup(String browserName) throws InterruptedException {
         Thread.currentThread().getStackTrace();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         System.out.println("onSetup is called....");
         TestBase();
         if (browserName.equals("chrome")) {

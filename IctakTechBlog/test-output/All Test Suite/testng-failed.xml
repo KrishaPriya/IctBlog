@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regression(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="Scripts.Trainer.TestTrainerNewPost">
+        <methods>
+          <include name="teardown"/>
+          <include name="addNewPostWithInvalidData"/>
+          <include name="afterTestDone"/>
+          <include name="onSetup"/>
+        </methods>
+      </class> <!-- Scripts.Trainer.TestTrainerNewPost -->
+      <class name="Scripts.Trainer.TestTrainerEditMyPost">
+        <methods>
+          <include name="teardown"/>
+          <include name="verifyEditMyPostWithInvalidData"/>
+          <include name="onSetup"/>
+        </methods>
+      </class> <!-- Scripts.Trainer.TestTrainerEditMyPost -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

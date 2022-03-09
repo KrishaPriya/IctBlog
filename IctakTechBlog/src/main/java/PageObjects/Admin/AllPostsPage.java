@@ -212,6 +212,7 @@ public class AllPostsPage {
         logout.click();
     }
 
+    //for editing post of user login from admin
     public void editFirstPostByUser(String userName) throws InterruptedException {
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
         for (WebElement card:cards) {
@@ -232,11 +233,12 @@ public class AllPostsPage {
         }
     }
 
+    //for deleting post of user login from admin
     public void deleteFirstPostByUser(String userName) throws InterruptedException {
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
         for (WebElement card:cards) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", card);
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             System.out.println(card.getText());
             WebElement userDescription = card.findElement(By.xpath(".//p"));
             if (userDescription.getText().contains(userName)){
@@ -244,7 +246,7 @@ public class AllPostsPage {
                 WebElement deleteButton = card.findElement(By.xpath(".//button[contains(text(), 'Delete')]"));
                 if (deleteButton != null){
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", deleteButton);
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                     deleteButton.click();
                     break;
                 }

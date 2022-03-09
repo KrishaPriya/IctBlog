@@ -34,7 +34,7 @@ public class TestTrainerSignup extends TestBase {
         objSignUp.setPassword(Password);
         objSignUp.clickSubmit();
 
-
+        Thread.sleep(1000);
         String expectedTitle = AutomationConstants.SIGNUP_MESSAGE_FOR_EXISTING_ACCOUNT;
         String actualTitle = driver.switchTo().alert().getText();
         driver.switchTo().alert().accept();
@@ -59,7 +59,7 @@ public class TestTrainerSignup extends TestBase {
         objSignUp.setPassword(Password);
 
 
-        String expectedTitle = "Enter Valid Email";
+        String expectedTitle = AutomationConstants.SIGNUP_EMAIL_VALIDATION_TEXT;
         String actualTitle = objSignUp.validUserText();
         System.out.println(actualTitle);
         Assert.assertEquals(expectedTitle, actualTitle);
@@ -78,7 +78,8 @@ public class TestTrainerSignup extends TestBase {
         objSignUp.setName(User);
         objSignUp.setTrainerAccount();
         objSignUp.setQualification();
-        Assert.assertTrue(objSignUp.qualificationIsDisplayed(),"Qualification should be displayed in Trainer account.");
+        String expectedText=AutomationConstants.QUALIFICATION_MESSAGE;
+        Assert.assertTrue(objSignUp.qualificationIsDisplayed(),expectedText);
 
     }
 
@@ -90,8 +91,8 @@ public class TestTrainerSignup extends TestBase {
         String User = ExcelUtility.getTrainerCellData(8, 0);
         objSignUp.setName(User);
         objSignUp.setUserAccount();
-        Assert.assertFalse(objSignUp.qualificationIsDisplayed(),"No Qualification should be displayed in user account.");
-
+         String expectedText=AutomationConstants.TRAINER_QUALIFICATION_MESSAGE;
+        Assert.assertFalse(objSignUp.qualificationIsDisplayed(),expectedText);
     }
 
     @Test(priority = 4)
@@ -111,7 +112,7 @@ public class TestTrainerSignup extends TestBase {
         Thread.sleep(WEBDRIVER_WAIT_TIME);
         String actualTitle = driver.switchTo().alert().getText();
         driver.switchTo().alert().accept();
-        String expectedTitle = "successfully created an account login to continue.";
+        String expectedTitle = AutomationConstants.SIGNUP_SUCCESS_MESSAGE;
         Assert.assertEquals(expectedTitle, actualTitle);
         Thread.sleep(WEBDRIVER_WAIT_TIME);
     }

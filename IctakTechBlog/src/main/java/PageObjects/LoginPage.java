@@ -44,7 +44,7 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-
+    //for selecting login from dropdown
     public void selectLoginDropdown() {
         selOption.click();
         Actions act = new Actions(driver);
@@ -52,15 +52,17 @@ public class LoginPage {
 
     }
 
+    //for username
     public void setUserName(String strUserName) {
         emailId.sendKeys(strUserName);
     }
 
+    //for clearing username
     public void clearUserName() {
 
         emailId.clear();
     }
-
+     //for clearing password
     public void clearPwd() {
         password.clear();
     }
@@ -80,18 +82,20 @@ public class LoginPage {
         Logout.click();
     }
 
-
+    //for password field validation
     public String passwordValidation() {
         String pwdValidation= pwdTxtTitle.getText();
        return pwdValidation;
 
     }
 
+    //for username field validation
     public String validationAssertUsername() {
         String usernameValidation = userNameTextTitle.getText();
         return usernameValidation;
     }
 
+    //for login using username,password
     public void loginToUser(String userName, String password) throws InterruptedException, IOException {
         this.setUserName(userName);
         this.setPassword(password);
@@ -102,6 +106,13 @@ public class LoginPage {
         this.selectLoginDropdown();
         String username = ExcelUtility.getAdminCellData(0, 0);
         String password = ExcelUtility.getAdminCellData(0, 1);
+        this.loginToUser(username,password);
+    }
+
+    public void loginAsTrainer() throws InterruptedException, IOException{
+        this.selectLoginDropdown();
+        String username= ExcelUtility.getTrainerCellData(0,0);
+        String password=ExcelUtility.getTrainerCellData(0,1);
         this.loginToUser(username,password);
     }
 }

@@ -1,5 +1,6 @@
 package Scripts.Trainer;
 
+import Constants.AutomationConstants;
 import PageObjects.Admin.AllPostsPage;
 import PageObjects.LoginPage;
 import Scripts.TestBase;
@@ -21,7 +22,7 @@ public class TestTrainerDeletePostInAdmin extends TestBase {
     }
 
     @Test(priority=1)
-    public  void editTrainerPostByAdminLogin() throws InterruptedException, IOException
+    public  void deleteTrainerPostByAdminLogin() throws InterruptedException, IOException
     {
         login=new LoginPage(driver);
         Thread.sleep(2000);
@@ -30,9 +31,9 @@ public class TestTrainerDeletePostInAdmin extends TestBase {
         Thread.sleep(2000);
         allPostsPage = new AllPostsPage(driver);
         String allposttext=allPostsPage.allposttext();
-        Assert.assertEquals(allposttext,"All Posts");
+        String expectedText= AutomationConstants.ALL_POST_TITLE_TEXT;
+        Assert.assertEquals(allposttext,expectedText);
 
         allPostsPage.deleteFirstPostByUser("krishna priya");
-
     }
 }
