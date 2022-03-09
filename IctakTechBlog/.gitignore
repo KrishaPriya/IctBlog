@@ -46,3 +46,6 @@ buildNumber.properties
 
 #Intellij
 .idea
+
+#Test output
+test-output/
