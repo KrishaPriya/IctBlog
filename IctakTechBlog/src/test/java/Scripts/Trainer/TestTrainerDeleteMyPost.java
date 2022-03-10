@@ -1,10 +1,13 @@
 package Scripts.Trainer;
 
 import Constants.AutomationConstants;
+import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.Trainer.TrainerMyPostPage;
 import Scripts.TestBase;
 import Utilities.ExcelUtility;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -15,16 +18,23 @@ import java.io.IOException;
 public class TestTrainerDeleteMyPost extends TestBase {
     TrainerMyPostPage objMyPost;
     LoginPage objLogin;
+    Logger logger;
+
+    public TestTrainerDeleteMyPost() {
+        super();
+        logger = Logger.getLogger(TestTrainerDeleteMyPost.class);
+        BasicConfigurator.configure();
 
 
-  @Test(priority=0)
+    }
+
+    @Test(priority=0)
   public void deletePost() throws IOException, InterruptedException {
       loginToUser();
-      Thread.sleep(2000);
+      TrainerMyPostPage.isPageLoaded(driver);
       objMyPost=new TrainerMyPostPage(driver);
-      Thread.sleep(2000);
       int count = objMyPost.deleteAllPost();
-
+      logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
   }
 
     /* @Test(priority = 0)
@@ -43,16 +53,19 @@ public class TestTrainerDeleteMyPost extends TestBase {
     }
 
     public void loginToUser() throws IOException, InterruptedException {
-        driver.navigate().refresh();
-        Actions act=new Actions(driver);
+        HomePage.isPageLoaded(driver);
+        HomePage homePage = new HomePage(driver);
+        homePage.selectLoginDropdown();
+
+        LoginPage.isPageLoaded(driver);
         objLogin=new LoginPage(driver);
-        objLogin.selectLoginDropdown();
         String username= ExcelUtility.getTrainerCellData(0,0);
         String password=ExcelUtility.getTrainerCellData(0,1);
         objLogin.loginToUser(username,password);
         String expectedTitle= AutomationConstants.HOME_PAGE_TITLE;
         String actualTitle=driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 /*
     private void loginToUser() throws InterruptedException, IOException {

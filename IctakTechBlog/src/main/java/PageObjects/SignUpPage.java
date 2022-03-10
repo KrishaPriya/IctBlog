@@ -1,11 +1,14 @@
 package PageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Random;
 
@@ -150,6 +153,12 @@ public class SignUpPage {
         }catch (Exception e){
             return false;
         }
+    }
+
+    public static void isPageLoaded(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.xpath("//h3[contains(text(),'Signup form')]"));
+        wait.until(ExpectedConditions.visibilityOf(title));
     }
 
 }

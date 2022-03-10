@@ -8,6 +8,8 @@ import PageObjects.Trainer.TrainerMyPostPage;
 import PageObjects.Trainer.TrainerNewPostPage;
 import Scripts.TestBase;
 import Utilities.ExcelUtility;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,6 +20,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
 import static Scripts.Utils.WEBDRIVER_WAIT_TIME_SEC;
@@ -28,6 +31,13 @@ public class TestTrainerLogin extends TestBase {
     TrainerNewPostPage objNewPost;
     TrainerMyPostPage objMyPost;
     HomePage objHomePage;
+    Logger logger;
+
+    public TestTrainerLogin() {
+        super();
+        logger = Logger.getLogger(TestTrainerLogin.class);
+        BasicConfigurator.configure();
+    }
 
     @AfterTest
     void afterTest() {
@@ -45,14 +55,13 @@ public class TestTrainerLogin extends TestBase {
         objHomePage = new HomePage(driver);
         objHomePage.selectLoginDropdown();
 
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
+        LoginPage.isPageLoaded(driver);
         objLogin = new LoginPage(driver);
         objLogin.clickLogin();
 
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
         Assert.assertEquals(strUrl, "http://64.227.132.106/login");
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
 
         String usernameAssertExpectedTitle = AutomationConstants.USERNAME_ASSERTION;
         String usernameAssertActualTitle = objLogin.validationAssertUsername();
@@ -61,15 +70,14 @@ public class TestTrainerLogin extends TestBase {
         String passwordAssertExpectedTitle = AutomationConstants.PASSWORD_ASSERTTION;
         String passwordAssertActualTitle = objLogin.passwordValidation();
         Assert.assertEquals(passwordAssertExpectedTitle, passwordAssertActualTitle);
-
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
     @Test(priority = 2)
     public void verifyValidUserWithoutPassword() throws IOException, InterruptedException {
         Actions act = new Actions(driver);
+        LoginPage.isPageLoaded(driver);
         objLogin = new LoginPage(driver);
-
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         String username = ExcelUtility.getTrainerCellData(1, 0);
         objLogin.setUserName(username);
         objLogin.clickLogin();
@@ -77,18 +85,18 @@ public class TestTrainerLogin extends TestBase {
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
         Assert.assertEquals(strUrl, "http://64.227.132.106/login");
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
 
         String passwordAssertExpectedTitle = AutomationConstants.PASSWORD_ASSERTTION;
         String passwordAssertActualTitle = objLogin.passwordValidation();
         Assert.assertEquals(passwordAssertExpectedTitle, passwordAssertActualTitle);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
     @Test(priority = 3)
     public void verifyInvalidUserInvalidPassword() throws IOException, InterruptedException {
         Actions act = new Actions(driver);
+        LoginPage.isPageLoaded(driver);
         objLogin = new LoginPage(driver);
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         String username = ExcelUtility.getTrainerCellData(4, 0);
         String password = ExcelUtility.getTrainerCellData(4, 1);
         objLogin.loginToUser(username, password);
@@ -103,15 +111,16 @@ public class TestTrainerLogin extends TestBase {
             Assert.assertEquals("User not found", driver.switchTo().alert().getText());
             driver.switchTo().alert().accept();
         }
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
     @Test(priority = 4)
     public void verifyValidUserInvalidPassword() throws IOException, InterruptedException {
         Actions act = new Actions(driver);
+        LoginPage.isPageLoaded(driver);
         objLogin = new LoginPage(driver);
         objLogin.clearUserName();
         objLogin.clearPwd();
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         String username = ExcelUtility.getTrainerCellData(1, 0);
         String password = ExcelUtility.getTrainerCellData(1, 1);
         objLogin.loginToUser(username, password);
@@ -119,35 +128,36 @@ public class TestTrainerLogin extends TestBase {
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
         Assert.assertEquals(strUrl, "http://64.227.132.106/login");
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
 
     }
 
     @Test(priority = 5)
     public void verifyValidLogin() throws IOException, InterruptedException {
         Actions act = new Actions(driver);
+        LoginPage.isPageLoaded(driver);
         objLogin = new LoginPage(driver);
         objLogin.clearUserName();
         objLogin.clearPwd();
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         String username = ExcelUtility.getTrainerCellData(0, 0);
         String password = ExcelUtility.getTrainerCellData(0, 1);
         objLogin.loginToUser(username, password);
 
         // Check the url
         String strUrl = driver.getCurrentUrl();
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         Assert.assertEquals(strUrl, "http://64.227.132.106/mypost");
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         // Check the title of page.
         String expectedTitle = AutomationConstants.HOME_PAGE_TITLE;
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle, actualTitle);
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
         logoutAfterTest();
+
     }
 
 
     private void logoutAfterTest() {
+        TrainerMyPostPage.isPageLoaded(driver);
         // Logout
         objMyPost = new TrainerMyPostPage(driver);
         objMyPost.logout();

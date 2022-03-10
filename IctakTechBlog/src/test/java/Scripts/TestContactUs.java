@@ -2,6 +2,9 @@ package Scripts;
 
 import PageObjects.ContactUs;
 import PageObjects.HomePage;
+import Scripts.Trainer.TestTrainerDeleteMyPost;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -14,6 +17,14 @@ import static Scripts.Utils.WEBDRIVER_WAIT_TIME;
 public class TestContactUs extends TestBase{
     ContactUs contactUs;
     HomePage homePage;
+    Logger logger;
+
+    public TestContactUs() {
+        super();
+        logger = Logger.getLogger(TestContactUs.class);
+        BasicConfigurator.configure();
+    }
+
     @AfterTest
     void afterTestDone() {
         homePage = null;
@@ -27,6 +38,7 @@ public class TestContactUs extends TestBase{
         Thread.sleep(WEBDRIVER_WAIT_TIME);
         boolean flag = homePage.setLogo();
         Assert.assertTrue(flag);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
     @Test(priority=1)
@@ -39,6 +51,7 @@ public class TestContactUs extends TestBase{
         String actualTitle=contactUs.setContactusTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
         Thread.sleep(WEBDRIVER_WAIT_TIME);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
 
 
     }
@@ -59,6 +72,7 @@ public class TestContactUs extends TestBase{
             driver.switchTo().alert().accept();
             Assert.assertFalse(expectedTitle == actualTitle);
             Thread.sleep(WEBDRIVER_WAIT_TIME);
+           logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
     @Test(priority=3)
@@ -78,6 +92,7 @@ public class TestContactUs extends TestBase{
         driver.switchTo().alert().accept();
         Assert.assertEquals(expectedTitle,actualTitle);
         Thread.sleep(WEBDRIVER_WAIT_TIME);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
     @Test(priority=4)
     public void verifySendMessageWithoutEmail() throws InterruptedException {
@@ -93,6 +108,7 @@ public class TestContactUs extends TestBase{
         String expectedUrl="http://64.227.132.106/contactus";
         String actualUrl=driver.getCurrentUrl();
         Assert.assertEquals(expectedUrl,actualUrl);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
 
     }
 

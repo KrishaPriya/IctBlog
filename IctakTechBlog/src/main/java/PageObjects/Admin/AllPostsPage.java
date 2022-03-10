@@ -1,12 +1,16 @@
 package PageObjects.Admin;
 
+import org.apache.poi.ss.formula.functions.T;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 //CAN DELETE GENERAL METHODS FOR ADDING POST
 public class AllPostsPage {
@@ -214,18 +218,21 @@ public class AllPostsPage {
 
     //for editing post of user login from admin
     public void editFirstPostByUser(String userName) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver,5);
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
         for (WebElement card:cards) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", card);
-            Thread.sleep(2000);
+            wait.until(ExpectedConditions.visibilityOf(card));
             System.out.println(card.getText());
             WebElement userDescription = card.findElement(By.xpath(".//p"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userDescription);
+            wait.until(ExpectedConditions.visibilityOf(userDescription));
             if (userDescription.getText().contains(userName)){
                 System.out.println("Found Card of user.. "+ card);
                 WebElement editButton = card.findElement(By.xpath(".//button[contains(text(), 'Edit')]"));
                 if (editButton != null){
                     ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editButton);
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                     editButton.click();
                     break;
                 }
@@ -235,23 +242,32 @@ public class AllPostsPage {
 
     //for deleting post of user login from admin
     public void deleteFirstPostByUser(String userName) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver,5);
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
         for (WebElement card:cards) {
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", card);
-            Thread.sleep(1000);
+            wait.until(ExpectedConditions.visibilityOf(card));
             System.out.println(card.getText());
             WebElement userDescription = card.findElement(By.xpath(".//p"));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", userDescription);
+            wait.until(ExpectedConditions.visibilityOf(userDescription));
             if (userDescription.getText().contains(userName)){
                 System.out.println("Found Card of user.. "+ card);
-                WebElement deleteButton = card.findElement(By.xpath(".//button[contains(text(), 'Delete')]"));
-                if (deleteButton != null){
-                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", deleteButton);
+                WebElement editButton = card.findElement(By.xpath(".//button[contains(text(), 'Delete')]"));
+                if (editButton != null){
+                    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editButton);
                     Thread.sleep(1000);
-                    deleteButton.click();
+                    editButton.click();
                     break;
                 }
             }
         }
+    }
+
+    public static void isPageLoaded(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.xpath("//a[contains(text(),'All posts')]"));
+        wait.until(ExpectedConditions.visibilityOf(title));
     }
 
 }

@@ -106,6 +106,12 @@ public class TrainerMyPostPage {
         Delete.click();
     }
 
+    public static void isPageLoaded(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.xpath("//h2[contains(text(),'My Posts')]"));
+        wait.until(ExpectedConditions.visibilityOf(title));
+    }
+
     //for deleting all post
     public int deleteAllPost() throws InterruptedException {
         WebElement button = getNextDeleteButton();
@@ -114,7 +120,7 @@ public class TrainerMyPostPage {
             count++;
             // scroll to button.
             System.out.println("Found Delete Button "+ button.getText());
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(4000);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(500);
 
             // Delete action
             button.click();
@@ -131,14 +137,12 @@ public class TrainerMyPostPage {
                 driver.switchTo().alert().accept();
             }
 
-            // Refresh page.
-            driver.navigate().refresh();
 
             // Get next delete.
             if (w.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("button")))) == null){
                 System.out.println("page refresh failed...");
             }else{
-                Thread.sleep(2000);
+                Thread.sleep(500);
                 button = getNextDeleteButton();
             }
         }
@@ -201,11 +205,12 @@ public class TrainerMyPostPage {
         categories.click();
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'dropdown-item')]"));
         for (WebElement card : cards) {
-            if(card.getText().equals(category)){
+            if (card.getText().equals(category)) {
                 System.out.println(card.getText());
                 card.click();
                 break;
             }
         }
     }
+
 }

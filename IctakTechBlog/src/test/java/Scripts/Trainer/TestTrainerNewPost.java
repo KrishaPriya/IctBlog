@@ -9,6 +9,8 @@ import PageObjects.Trainer.TrainerMyPostPage;
 import PageObjects.Trainer.TrainerNewPostPage;
 import Scripts.TestBase;
 import Utilities.ExcelUtility;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,6 +31,13 @@ public class TestTrainerNewPost extends TestBase {
     TrainerMyPostPage objMyPost;
     HomePage objHomePage;
 
+    Logger logger;
+
+    public TestTrainerNewPost() {
+        super();
+        logger = Logger.getLogger(TestTrainerNewPost.class);
+        BasicConfigurator.configure();
+    }
 
     @AfterTest
     void afterTestDone() {
@@ -98,17 +107,16 @@ public class TestTrainerNewPost extends TestBase {
     @Test(priority = 1)
     public void addingNewPost() throws IOException, InterruptedException {
         loginToUser();
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
 
         // Go to new post.
+        TrainerMyPostPage.isPageLoaded(driver);
         objMyPost = new TrainerMyPostPage(driver);
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
         objMyPost.clickOnNewPost();
 
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
 
         for (int i = 9; i < 11; i++) {
             // update new post
+            TrainerNewPostPage.isPageLoaded(driver);
             objNewPost=new TrainerNewPostPage(driver);
             String url = driver.getCurrentUrl();
             String Title=ExcelUtility.getTrainerCellData(i,0);
@@ -118,7 +126,6 @@ public class TestTrainerNewPost extends TestBase {
             objNewPost.setImage(Image);
             objNewPost.setCategory();
             objNewPost.setPost(Post);
-            Thread.sleep(2000);
             objNewPost.clickSubmit();
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
@@ -135,45 +142,41 @@ public class TestTrainerNewPost extends TestBase {
 
             driver.get(url);
         }
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
     @Test(priority = 2)
     public void addNewPostWithInvalidData() throws InterruptedException, IOException {
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
+        TrainerNewPostPage.isPageLoaded(driver);
         objNewPost=new TrainerNewPostPage(driver);
-
         String title = ExcelUtility.getTrainerCellData(16, 0);
         String image = "";
         String post = "";
-        Thread.sleep(1000);
         objNewPost.setTitle(title);
         objNewPost.setImage(image);
         objNewPost.setCategory();
         objNewPost.setPost(post);
-        //Thread.sleep(2000);
-        objNewPost.clickSubmit();
-        Thread.sleep(2000);
-        boolean value = objNewPost.btnSubmitNotEnabled();
-        Assert.assertEquals(value, false);
-       Thread.sleep(1000);
+        Assert.assertEquals(objNewPost.isSubmitButtonEnabled(), false);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
 
 
     public void loginToUser() throws IOException, InterruptedException {
-        driver.navigate().refresh();
-
-        Actions act = new Actions(driver);
-        objLogin = new LoginPage(driver);
-        //Thread.sleep(500);
-        objLogin.selectLoginDropdown();
-        String username = ExcelUtility.getTrainerCellData(0, 0);
-        String password = ExcelUtility.getTrainerCellData(0, 1);
-        objLogin.loginToUser(username, password);
-        String expectedTitle = AutomationConstants.HOME_PAGE_TITLE;
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(expectedTitle, actualTitle);
+        HomePage.isPageLoaded(driver);
+        HomePage homePage = new HomePage(driver);
+        homePage.selectLoginDropdown();
+        LoginPage.isPageLoaded(driver);
+        objLogin=new LoginPage(driver);
+        String username= ExcelUtility.getTrainerCellData(0,0);
+        String password=ExcelUtility.getTrainerCellData(0,1);
+        objLogin.loginToUser(username,password);
+        String expectedTitle= AutomationConstants.HOME_PAGE_TITLE;
+        String actualTitle=driver.getTitle();
+        Assert.assertEquals(expectedTitle,actualTitle);
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
+
 
 
 }

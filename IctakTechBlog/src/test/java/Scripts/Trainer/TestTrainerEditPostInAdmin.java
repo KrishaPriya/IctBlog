@@ -2,11 +2,16 @@ package Scripts.Trainer;
 
 import Constants.AutomationConstants;
 import PageObjects.Admin.AllPostsPage;
+import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.Trainer.TrainerEditPost;
 import Scripts.TestBase;
 import Utilities.ExcelUtility;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -20,6 +25,15 @@ public class TestTrainerEditPostInAdmin extends TestBase {
     LoginPage login;
     AllPostsPage allPostsPage;
     TrainerEditPost objEdit;
+    Logger logger;
+
+    public TestTrainerEditPostInAdmin() {
+        super();
+        logger = Logger.getLogger(TestTrainerEditPostInAdmin.class);
+        BasicConfigurator.configure();
+    }
+
+
     @AfterTest
     void afterTest() {
         login = null;
@@ -29,15 +43,22 @@ public class TestTrainerEditPostInAdmin extends TestBase {
     @Test(priority=1)
     public  void editTrainerPostByAdminLogin() throws InterruptedException, IOException
     {
+        HomePage.isPageLoaded(driver);
+        HomePage page = new HomePage(driver);
+        page.selectLoginDropdown();
+
+        LoginPage.isPageLoaded(driver);
         login=new LoginPage(driver);
-        Thread.sleep(2000);
         login.loginAsAdmin();
-        Thread.sleep(2000);
+
+        AllPostsPage.isPageLoaded(driver);
         allPostsPage = new AllPostsPage(driver);
         String allposttext=allPostsPage.allposttext();
         Assert.assertEquals(allposttext,"All Posts");
         allPostsPage.editFirstPostByUser("krishna");
-        Thread.sleep(5000);
+
+
+        TrainerEditPost.isPageLoaded(driver);
         objEdit = new TrainerEditPost(driver);
         String url=driver.getCurrentUrl();
         String title= ExcelUtility.getTrainerCellData(10,3);
@@ -47,11 +68,18 @@ public class TestTrainerEditPostInAdmin extends TestBase {
         objEdit.setImage(image);
         objEdit.setPostDesc(post);
         objEdit.setSubmit();
-        String alertMessage=driver.switchTo().alert().getText();
-        String expectedAlert= AutomationConstants.EDITED_ALERT;
-        Assert.assertEquals(expectedAlert,alertMessage);
-        Alert al=driver.switchTo().alert();
-        al.accept();
-        Thread.sleep(WEBDRIVER_WAIT_TIME);
+
+        // Accept Alert
+        WebDriverWait w = new WebDriverWait(driver, 2000);
+        if(w.until(ExpectedConditions.alertIsPresent())==null) {
+            logger.error("We should have got alert");
+        }
+        else {
+            String alertMessage=driver.switchTo().alert().getText();
+            String expectedAlert= AutomationConstants.EDITED_ALERT;
+            Assert.assertEquals(expectedAlert,alertMessage);
+            driver.switchTo().alert().accept();
+            logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
+        }
     }
 }

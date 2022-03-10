@@ -3,12 +3,16 @@ package PageObjects;
 
 import Constants.AutomationConstants;
 import Utilities.ExcelUtility;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.xml.datatype.Duration;
 import java.io.IOException;
 
 
@@ -50,6 +54,12 @@ public class LoginPage {
         Actions act = new Actions(driver);
         act.click(login).perform();
 
+    }
+
+    public static void isPageLoaded(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.id("user"));
+        wait.until(ExpectedConditions.visibilityOf(title));
     }
 
     //for username
@@ -103,14 +113,14 @@ public class LoginPage {
     }
 
     public void loginAsAdmin() throws InterruptedException, IOException{
-        this.selectLoginDropdown();
+//        this.selectLoginDropdown();
         String username = ExcelUtility.getAdminCellData(0, 0);
         String password = ExcelUtility.getAdminCellData(0, 1);
         this.loginToUser(username,password);
     }
 
     public void loginAsTrainer() throws InterruptedException, IOException{
-        this.selectLoginDropdown();
+//        this.selectLoginDropdown();
         String username= ExcelUtility.getTrainerCellData(0,0);
         String password=ExcelUtility.getTrainerCellData(0,1);
         this.loginToUser(username,password);

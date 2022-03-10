@@ -2,8 +2,11 @@ package Scripts.Trainer;
 
 import Constants.AutomationConstants;
 import PageObjects.Admin.AllPostsPage;
+import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import Scripts.TestBase;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -15,6 +18,13 @@ public class TestTrainerDeletePostInAdmin extends TestBase {
 
     LoginPage login;
     AllPostsPage allPostsPage;
+    Logger logger;
+    public TestTrainerDeletePostInAdmin() {
+        super();
+        logger = Logger.getLogger(TestTrainerDeletePostInAdmin.class);
+        BasicConfigurator.configure();
+    }
+
     @AfterTest
     void afterTest() {
         login = null;
@@ -24,8 +34,12 @@ public class TestTrainerDeletePostInAdmin extends TestBase {
     @Test(priority=1)
     public  void deleteTrainerPostByAdminLogin() throws InterruptedException, IOException
     {
+        HomePage.isPageLoaded(driver);
+        HomePage homePage = new HomePage(driver);
+        homePage.selectLoginDropdown();
+
+        LoginPage.isPageLoaded(driver);
         login=new LoginPage(driver);
-        Thread.sleep(2000);
         login.loginAsAdmin();
 
         Thread.sleep(2000);
@@ -35,5 +49,6 @@ public class TestTrainerDeletePostInAdmin extends TestBase {
         Assert.assertEquals(allposttext,expectedText);
 
         allPostsPage.deleteFirstPostByUser("krishna priya");
+        logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 }

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -40,6 +42,9 @@ public class HomePage {
 
     @FindBy(xpath="/html/body/app-root/app-home/app-header/nav/div/div/ul/li[3]/a")
     private WebElement myPost;
+
+    @FindBy(xpath="/html/body/app-root/app-home/app-header/nav/div/div/ul/li[11]/ul/li[2]/a")
+    private WebElement signUp;
 
     public  HomePage(WebDriver driver)
     {
@@ -90,6 +95,13 @@ public class HomePage {
         act.click(login).perform();
 
     }
+    //Select for login from dropdown
+    public void selectSignUpDropdown() {
+        selOption.click();
+        Actions act = new Actions(driver);
+        act.click(signUp).perform();
+
+    }
      //for validating logo
     public boolean setLogo(){
         return logo.isDisplayed();
@@ -106,4 +118,11 @@ public class HomePage {
         }
 
     }
+
+    public static void isPageLoaded(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.xpath("//a[contains(text(),'Home')]"));
+        wait.until(ExpectedConditions.visibilityOf(title));
+    }
+
 }

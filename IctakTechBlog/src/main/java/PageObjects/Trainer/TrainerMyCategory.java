@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -45,7 +47,14 @@ public class TrainerMyCategory {
 
     //for deleting post of user login from admin
     public int sortByCategoryCount(String userName) throws InterruptedException {
-        List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
-        return cards.size();
+//        List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
+        List<WebElement> userNames = driver.findElements(By.xpath("//p[contains(text(),'By "+userName+"')]"));
+        return userNames.size();
+    }
+
+    public static void isPageLoaded(WebDriver driver, String category){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.xpath("//h2[contains(text(),'"+category+"')]"));
+        wait.until(ExpectedConditions.visibilityOf(title));
     }
 }

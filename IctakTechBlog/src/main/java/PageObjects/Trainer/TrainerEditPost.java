@@ -1,10 +1,13 @@
 package PageObjects.Trainer;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TrainerEditPost {
     WebDriver driver;
@@ -52,19 +55,22 @@ public class TrainerEditPost {
 
     //for submit
     public void setSubmit() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver,5);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);" ,submit);
-        Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOf(submit));
         submit.click();
     }
     //for checking is submit is enabled
     public boolean btnSubmitNotEnabled() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver,5);
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);" ,submit);
-        Thread.sleep(2000);
-        if(submit.isEnabled())
-            System.out.println("We got alert");
-        return false;
+        wait.until(ExpectedConditions.visibilityOf(submit));
+        return submit.isEnabled();
+    }
 
-
-
+    public static void isPageLoaded(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebElement title = driver.findElement(By.xpath("//h2[contains(text(),'Edit post')]"));
+        wait.until(ExpectedConditions.visibilityOf(title));
     }
 }
