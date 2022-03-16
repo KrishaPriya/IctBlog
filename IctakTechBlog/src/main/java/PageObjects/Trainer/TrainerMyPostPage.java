@@ -120,7 +120,7 @@ public class TrainerMyPostPage {
             count++;
             // scroll to button.
             System.out.println("Found Delete Button "+ button.getText());
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(500);
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);Thread.sleep(1000);
 
             // Delete action
             button.click();
@@ -142,7 +142,7 @@ public class TrainerMyPostPage {
             if (w.until(ExpectedConditions.refreshed(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("button")))) == null){
                 System.out.println("page refresh failed...");
             }else{
-                Thread.sleep(500);
+                Thread.sleep(1000);
                 button = getNextDeleteButton();
             }
         }
