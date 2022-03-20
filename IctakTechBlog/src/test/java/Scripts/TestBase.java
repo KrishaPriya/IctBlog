@@ -1,8 +1,12 @@
 package Scripts;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 
 import java.io.FileInputStream;
@@ -16,11 +20,11 @@ import java.util.logging.Logger;
 public class TestBase {
     public static Properties prop = null;
     public WebDriver driver;
-//    String driverPath = ".//Drivers/chromedriver.exe";
-    String driverpath = "/Users/naveenmurthy/Documents/Priya/FirefoxWebDriver/geckodriver";
+    public static String driverpath = "";
 
     public static void TestBase() {
         try {
+            driverpath = System.getProperty("user.dir") + "/src/test/resources/geckodriver";
             prop = new Properties();
             FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/config.properties");
             prop.load(ip);
@@ -36,10 +40,8 @@ public class TestBase {
     @BeforeClass
     public void onSetup(String browserName) throws InterruptedException {
       //  Logger logger= LogManager.getLogger(TestBase.class);
-
-
         Thread.currentThread().getStackTrace();
-        Thread.sleep(3000);
+
         System.out.println("onSetup is called....");
         TestBase();
         if (browserName.equals("chrome")) {
@@ -50,9 +52,11 @@ public class TestBase {
             System.setProperty("webdriver.gecko.driver", driverpath);
             driver = new FirefoxDriver();
         }
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
-        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver,5);
+        wait.until(ExpectedConditions.urlToBe(prop.getProperty("url")));
+//        driver.manage().window().maximize();
     }
 
     @AfterClass

@@ -115,7 +115,7 @@ public class TrainerMyPostPage {
 
     //for deleting all post
     public int deleteAllPost() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement button = getNextDeleteButton();
         int count = 0;
         while (button != null){
