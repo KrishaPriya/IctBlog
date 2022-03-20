@@ -21,7 +21,7 @@ This is divided in 4 main seperate Eclipse/Intellij project.
 3. Admin Feature
 4. Page Navigation 
 
-## NOTE
+### NOTE
   To run the project for the individual feature open /Projects/Feature_Name in Eclipse and Intellij and run the TestNG test.xml file from the run configuration. 
   Each Feature are currently  build in seperate env (Windows / Mac) So before running the code we need to change the driver path. 
   Below code exaple show the changes need to dune under the Trainer project.
