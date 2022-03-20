@@ -12,4 +12,4 @@ The Project structure have
 
 
 To run the project for the individual feature open /Projects/<Feature> in eclipse and intelj and run the TestNG test.xml file from the run configuration. 
-  The demo video show how to open the Trainer project and run in in eclipse in mac enviroment. 
+  The demo video show how to open the Trainer project and run in eclipse in mac enviroment. 
