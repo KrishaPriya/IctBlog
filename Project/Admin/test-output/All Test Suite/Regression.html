@@ -1,0 +1,204 @@
+<html>
+<head>
+<title>TestNG:  Regression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Regression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>25/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Mar 20 12:35:48 GST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>150 seconds (150530 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Scripts.Admin.TestAdminMyPostPage.VerifyEditNewPostInMyPostpageINVALIDATA()'><b>VerifyEditNewPostInMyPostpageINVALIDATA</b><br>Test class: Scripts.Admin.TestAdminMyPostPage</td>
+<td></td>
+<td>5</td>
+<td>Scripts.Admin.TestAdminMyPostPage@28d6290</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAddNewPost.VerifyTotalElements()'><b>VerifyTotalElements</b><br>Test class: Scripts.Admin.TestAdminAddNewPost</td>
+<td></td>
+<td>0</td>
+<td>Scripts.Admin.TestAdminAddNewPost@1de5f0ef</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAllPostPage.VerifyDeletePostInAllPostpage()'><b>VerifyDeletePostInAllPostpage</b><br>Test class: Scripts.Admin.TestAdminAllPostPage</td>
+<td></td>
+<td>2</td>
+<td>Scripts.Admin.TestAdminAllPostPage@376a312c</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAddNewPost.VerifyEditNewPostInHomepage()'><b>VerifyEditNewPostInHomepage</b><br>Test class: Scripts.Admin.TestAdminAddNewPost</td>
+<td></td>
+<td>8</td>
+<td>Scripts.Admin.TestAdminAddNewPost@1de5f0ef</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminLogin.VerifyValidUsernameInvalidPassword()'><b>VerifyValidUsernameInvalidPassword</b><br>Test class: Scripts.Admin.TestAdminLogin</td>
+<td></td>
+<td>1</td>
+<td>Scripts.Admin.TestAdminLogin@470a696f</td></tr>
+<tr>
+<td title='Scripts.Admin.TestPostApprovalAndReject.VerifyLoginAsUser()'><b>VerifyLoginAsUser</b><br>Test class: Scripts.Admin.TestPostApprovalAndReject</td>
+<td></td>
+<td>1</td>
+<td>Scripts.Admin.TestPostApprovalAndReject@6ca0256d</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAllPostPage.VerifyEditNewPostInAllPostpageINVALIDATA()'><b>VerifyEditNewPostInAllPostpageINVALIDATA</b><br>Test class: Scripts.Admin.TestAdminAllPostPage</td>
+<td></td>
+<td>4</td>
+<td>Scripts.Admin.TestAdminAllPostPage@376a312c</td></tr>
+<tr>
+<td title='Scripts.Admin.AddRemoveCategory.RemoveCategory()'><b>RemoveCategory</b><br>Test class: Scripts.Admin.AddRemoveCategory</td>
+<td></td>
+<td>0</td>
+<td>Scripts.Admin.AddRemoveCategory@5ef0d29e</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAddNewPost.VerifyAddnewPost()'><b>VerifyAddnewPost</b><br>Test class: Scripts.Admin.TestAdminAddNewPost</td>
+<td></td>
+<td>2</td>
+<td>Scripts.Admin.TestAdminAddNewPost@1de5f0ef</td></tr>
+<tr>
+<td title='Scripts.Admin.AddRemoveCategory.AddCategoryValidData()'><b>AddCategoryValidData</b><br>Test class: Scripts.Admin.AddRemoveCategory</td>
+<td></td>
+<td>7</td>
+<td>Scripts.Admin.AddRemoveCategory@5ef0d29e</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminLogin.VerifyLoginAsAdmin()'><b>VerifyLoginAsAdmin</b><br>Test class: Scripts.Admin.TestAdminLogin</td>
+<td></td>
+<td>1</td>
+<td>Scripts.Admin.TestAdminLogin@470a696f</td></tr>
+<tr>
+<td title='Scripts.Admin.TestPostApprovalAndReject.VerifyPostReject()'><b>VerifyPostReject</b><br>Test class: Scripts.Admin.TestPostApprovalAndReject</td>
+<td></td>
+<td>4</td>
+<td>Scripts.Admin.TestPostApprovalAndReject@6ca0256d</td></tr>
+<tr>
+<td title='Scripts.Admin.AddRemoveCategory.AddCategoryAlreadyExists()'><b>AddCategoryAlreadyExists</b><br>Test class: Scripts.Admin.AddRemoveCategory</td>
+<td></td>
+<td>1</td>
+<td>Scripts.Admin.AddRemoveCategory@5ef0d29e</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAddNewPost.VerifyAddnewPostWithBlanKdATA()'><b>VerifyAddnewPostWithBlanKdATA</b><br>Test class: Scripts.Admin.TestAdminAddNewPost</td>
+<td></td>
+<td>3</td>
+<td>Scripts.Admin.TestAdminAddNewPost@1de5f0ef</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminLogin.VerifyInvalidUsernameValidPassword()'><b>VerifyInvalidUsernameValidPassword</b><br>Test class: Scripts.Admin.TestAdminLogin</td>
+<td></td>
+<td>1</td>
+<td>Scripts.Admin.TestAdminLogin@470a696f</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminLogin.VerifyInvalidUsernamePassword()'><b>VerifyInvalidUsernamePassword</b><br>Test class: Scripts.Admin.TestAdminLogin</td>
+<td></td>
+<td>4</td>
+<td>Scripts.Admin.TestAdminLogin@470a696f</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminMyPostPage.VerifyDeletePostInMyPostpage()'><b>VerifyDeletePostInMyPostpage</b><br>Test class: Scripts.Admin.TestAdminMyPostPage</td>
+<td></td>
+<td>1</td>
+<td>Scripts.Admin.TestAdminMyPostPage@28d6290</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminMyPostPage.VerifyEditNewPostInMyPostpage()'><b>VerifyEditNewPostInMyPostpage</b><br>Test class: Scripts.Admin.TestAdminMyPostPage</td>
+<td></td>
+<td>6</td>
+<td>Scripts.Admin.TestAdminMyPostPage@28d6290</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminLogin.VerifyTotalElementsLoginPage()'><b>VerifyTotalElementsLoginPage</b><br>Test class: Scripts.Admin.TestAdminLogin</td>
+<td></td>
+<td>0</td>
+<td>Scripts.Admin.TestAdminLogin@470a696f</td></tr>
+<tr>
+<td title='Scripts.Admin.AddRemoveCategory.AddCategoryInVaildData()'><b>AddCategoryInVaildData</b><br>Test class: Scripts.Admin.AddRemoveCategory</td>
+<td></td>
+<td>0</td>
+<td>Scripts.Admin.AddRemoveCategory@5ef0d29e</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAddNewPost.VerifyEditNewPostInHomepageInvalidData()'><b>VerifyEditNewPostInHomepageInvalidData</b><br>Test class: Scripts.Admin.TestAdminAddNewPost</td>
+<td></td>
+<td>4</td>
+<td>Scripts.Admin.TestAdminAddNewPost@1de5f0ef</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAllPostPage.VerifyEditNewPostInAllPostpage()'><b>VerifyEditNewPostInAllPostpage</b><br>Test class: Scripts.Admin.TestAdminAllPostPage</td>
+<td></td>
+<td>3</td>
+<td>Scripts.Admin.TestAdminAllPostPage@376a312c</td></tr>
+<tr>
+<td title='Scripts.Admin.TestPostApprovalAndReject.VerifyPostApproval()'><b>VerifyPostApproval</b><br>Test class: Scripts.Admin.TestPostApprovalAndReject</td>
+<td></td>
+<td>13</td>
+<td>Scripts.Admin.TestPostApprovalAndReject@6ca0256d</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminLogin.VerifyBlankUsernamePassword()'><b>VerifyBlankUsernamePassword</b><br>Test class: Scripts.Admin.TestAdminLogin</td>
+<td></td>
+<td>0</td>
+<td>Scripts.Admin.TestAdminLogin@470a696f</td></tr>
+<tr>
+<td title='Scripts.Admin.TestAdminAddNewPost.VerifyDeletePostInHomepage()'><b>VerifyDeletePostInHomepage</b><br>Test class: Scripts.Admin.TestAdminAddNewPost</td>
+<td></td>
+<td>2</td>
+<td>Scripts.Admin.TestAdminAddNewPost@1de5f0ef</td></tr>
+</table><p>
+</body>
+</html>
