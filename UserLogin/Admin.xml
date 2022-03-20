@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Admin Suite">
+	<test name="AdminLogins">
+		<classes>
+
+			<class name="Scripts.Admin.testAdminLogin" />
+		</classes>
+	</test>
+	<test name="AdminDelete">
+		<classes>
+
+			<class name="Scripts.Admin.testAdminDelete" />
+		</classes>
+	</test>
+	<test name="AdminEdit">
+		<classes>
+
+			<class name="Scripts.Admin.testAdminEdit" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

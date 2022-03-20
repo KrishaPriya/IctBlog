@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="User Suite">
+  <test  name="UserLogins">
+    <classes>
+ 
+  <class name="Scripts.User.testUserLogin"/>
+    </classes>
+  </test>
+   <test  name="UserDelete">
+    <classes>
+ 
+  <class name="Scripts.User.testUserDeletePost"/>
+    </classes>
+  </test>
+   <test  name="UserEdit">
+    <classes>
+ 
+  <class name="Scripts.User.testUserEditPost"/>
+    </classes>
+  </test>
+  
+   <!-- UserLogins -->
+</suite> <!-- Suite -->

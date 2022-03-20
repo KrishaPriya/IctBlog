@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="UserLogin(failed)">
+    <classes>
+      <class name="Scripts.User.testUserLogin">
+        <methods>
+          <include name="verifyInValidLoginWithInvalidEmail"/>
+          <include name="tearDown"/>
+          <include name="onSetup"/>
+        </methods>
+      </class> <!-- Scripts.User.testUserLogin -->
+    </classes>
+  </test> <!-- UserLogin(failed) -->
+  <test thread-count="5" name="UserDeletePost(failed)">
+    <classes>
+      <class name="Scripts.User.testUserDeletePost">
+        <methods>
+          <include name="verifyValidLogin"/>
+          <include name="tearDown"/>
+          <include name="onSetup"/>
+        </methods>
+      </class> <!-- Scripts.User.testUserDeletePost -->
+    </classes>
+  </test> <!-- UserDeletePost(failed) -->
+  <test thread-count="5" name="UserEditPost(failed)">
+    <classes>
+      <class name="Scripts.User.testUserEditPost">
+        <methods>
+          <include name="verifyValidLogin"/>
+          <include name="EditUserFromlogin"/>
+          <include name="tearDown"/>
+          <include name="newPosts"/>
+          <include name="navigateNewPosts"/>
+          <include name="onSetup"/>
+        </methods>
+      </class> <!-- Scripts.User.testUserEditPost -->
+    </classes>
+  </test> <!-- UserEditPost(failed) -->
+</suite> <!-- Failed suite [Suite] -->

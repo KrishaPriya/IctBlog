@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [User Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="UserEdit(failed)">
+    <classes>
+      <class name="Scripts.User.testUserEditPost">
+        <methods>
+          <include name="EditUserFromlogin"/>
+          <include name="tearDown"/>
+          <include name="onSetup"/>
+        </methods>
+      </class> <!-- Scripts.User.testUserEditPost -->
+    </classes>
+  </test> <!-- UserEdit(failed) -->
+</suite> <!-- Failed suite [User Suite] -->
