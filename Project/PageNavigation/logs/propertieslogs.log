@@ -1,0 +1,520 @@
+[INFO ] 2022-03-18 14:57:11.257 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-18 14:57:12.199 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-18 14:57:13.667 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-18 14:58:06.050 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 14:58:08.919 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 14:58:10.841 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 14:58:11.478 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 14:59:04.025 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-18 14:59:15.888 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 14:59:17.610 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 14:59:18.541 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 14:59:31.862 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 14:59:33.230 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 14:59:33.673 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 14:59:35.104 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 14:59:42.642 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-18 14:59:43.053 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-18 14:59:43.541 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-18 14:59:44.093 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-18 15:18:44.865 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 15:18:48.166 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 15:18:49.929 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 15:18:51.404 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 15:18:54.316 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 15:18:55.980 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 15:29:07.379 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 15:29:08.938 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 15:29:11.046 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 15:29:12.688 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 15:29:15.766 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 15:29:17.166 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 15:34:59.300 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 15:35:00.946 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 15:35:02.241 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 15:35:03.839 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 15:35:05.364 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 15:35:06.383 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 15:35:10.806 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 15:35:12.339 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 15:35:13.724 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 15:35:15.337 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-18 15:35:17.114 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 15:35:18.116 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-18 15:38:05.301 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 15:38:06.963 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 15:38:08.237 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 15:38:09.925 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 15:38:11.532 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 15:38:12.540 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 15:38:16.869 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 15:38:18.297 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 15:38:19.556 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 15:38:21.087 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-18 15:38:22.852 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 15:38:23.866 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-18 16:24:38.492 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-18 16:24:39.646 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-18 16:24:40.206 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-18 16:24:53.747 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 16:25:04.673 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:25:06.284 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 16:25:07.892 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:25:09.502 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:25:11.266 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:25:12.272 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 16:25:16.623 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:25:18.301 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:25:19.587 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:25:21.200 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-18 16:25:22.502 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:25:23.516 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-18 16:35:51.317 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-18 16:35:54.669 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:35:56.703 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:35:58.364 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:36:01.104 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:36:02.375 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 16:37:31.779 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:37:33.650 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 16:37:34.940 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:37:36.532 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:37:38.164 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:37:39.178 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 16:39:18.656 [main] HomePageTest - prev button is enabled
+[INFO ] 2022-03-18 16:39:20.752 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 16:45:29.848 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 16:45:59.961 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:46:01.345 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 16:46:02.778 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:46:04.215 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:46:09.801 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-18 16:46:11.893 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:46:13.167 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:46:14.887 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:46:17.421 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:46:18.816 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 16:46:21.565 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:46:22.990 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:46:24.180 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:46:25.501 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-18 16:46:26.738 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:46:27.741 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-18 16:46:30.208 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-18 16:46:30.233 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-18 16:46:31.378 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-18 16:46:31.502 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-18 16:46:32.377 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-18 16:46:32.406 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-18 16:46:32.621 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-18 16:46:32.756 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-18 16:46:32.930 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-18 16:46:33.067 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-18 16:51:54.592 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 16:52:06.867 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:52:08.886 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 16:52:10.207 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:52:12.633 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:52:14.577 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:52:15.580 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 16:52:20.984 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:52:22.964 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:52:24.216 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:52:26.260 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-18 16:52:28.110 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:52:29.123 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-18 16:52:31.358 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-18 16:52:31.376 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-18 16:52:32.456 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-18 16:52:32.473 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-18 16:52:33.431 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-18 16:52:33.482 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-18 16:52:33.671 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-18 16:52:33.831 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-18 16:52:34.003 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-18 16:52:34.159 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-18 16:56:01.264 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 16:56:07.556 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:56:09.673 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:56:11.270 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:56:13.583 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:56:15.822 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:56:17.190 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 16:56:21.058 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-18 16:56:23.064 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:56:24.414 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:56:26.572 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:56:28.373 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:56:29.609 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 16:56:33.238 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:56:35.279 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 16:56:36.471 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:56:38.380 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:56:40.197 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:56:41.209 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 16:56:43.932 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-18 16:56:43.951 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-18 16:56:44.876 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-18 16:56:44.939 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-18 16:56:45.667 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-18 16:56:45.691 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-18 16:56:45.912 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-18 16:56:46.071 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-18 16:56:46.258 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-18 16:56:46.409 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-18 16:59:12.234 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 16:59:20.054 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:59:22.146 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:59:23.419 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:59:25.384 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:59:27.517 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:59:28.840 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 16:59:33.054 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-18 16:59:35.093 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 16:59:36.481 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:59:38.858 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:59:40.801 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:59:42.082 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 16:59:45.794 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 16:59:47.666 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 16:59:48.996 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 16:59:51.007 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 16:59:52.774 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 16:59:53.794 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 16:59:56.188 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-18 16:59:56.208 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-18 16:59:57.232 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-18 16:59:57.280 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-18 16:59:58.184 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-18 16:59:58.204 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-18 16:59:58.620 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-18 16:59:58.799 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-18 16:59:58.959 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-18 16:59:59.099 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-18 17:02:49.336 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-18 17:02:49.977 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-18 17:02:50.337 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-18 17:02:55.765 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-18 17:03:02.470 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 17:03:04.466 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 17:03:05.797 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 17:03:07.728 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 17:03:09.644 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 17:03:10.730 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 17:03:14.893 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-18 17:03:16.916 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-18 17:03:18.232 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 17:03:20.110 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 17:03:21.932 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 17:03:23.203 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-18 17:03:26.994 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-18 17:03:28.908 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-18 17:03:30.133 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-18 17:03:32.091 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-18 17:03:33.967 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-18 17:03:35.105 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-18 17:03:38.510 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-18 17:03:38.554 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-18 17:03:39.842 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-18 17:03:39.866 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-18 17:03:40.708 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-18 17:03:40.740 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-18 17:03:40.988 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-18 17:03:41.175 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-18 17:03:41.368 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-18 17:03:41.604 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 00:53:49.233 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 00:53:49.773 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 00:53:58.401 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 00:54:11.198 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 00:54:13.410 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 00:54:14.874 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 00:54:16.933 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 00:54:18.832 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 00:54:20.090 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 00:54:24.206 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 00:54:26.534 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 00:54:27.778 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 00:54:29.755 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 00:54:31.550 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 00:54:32.817 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 00:54:36.613 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 00:54:38.646 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 00:54:39.854 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 00:54:41.748 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 00:54:43.592 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 00:54:44.610 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-19 00:54:46.719 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 00:54:46.738 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 00:54:47.650 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 00:54:47.674 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 00:54:48.502 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 00:54:48.567 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 00:54:49.240 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 00:54:49.652 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 00:54:49.831 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 00:54:50.058 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 00:59:14.313 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 00:59:14.905 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 00:59:15.400 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 00:59:19.222 [main] HomePageTest - prev button is enabled
+[INFO ] 2022-03-19 00:59:21.198 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 00:59:28.368 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 00:59:30.440 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 00:59:32.020 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 00:59:34.194 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 00:59:36.309 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 00:59:37.450 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 00:59:41.389 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 00:59:43.572 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 00:59:44.857 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 00:59:46.785 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 00:59:48.706 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 00:59:49.921 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 00:59:53.715 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 00:59:55.717 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 00:59:57.039 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 00:59:59.054 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 01:00:01.074 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 01:00:02.076 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-19 01:00:04.244 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 01:00:04.262 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 01:00:05.323 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 01:00:05.478 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 01:00:06.195 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 01:00:06.216 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 01:00:06.402 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 01:00:06.533 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 01:00:06.699 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 01:00:06.968 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 05:51:56.390 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 05:51:58.048 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 05:51:59.374 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 05:52:24.154 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 05:52:26.442 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 05:52:28.332 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 05:52:30.418 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 05:52:34.323 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 05:52:35.414 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 05:53:09.597 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 05:53:11.739 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 05:53:13.179 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 05:53:15.585 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 05:53:17.462 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 05:53:18.523 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 05:53:22.582 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 05:53:24.448 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 05:53:25.834 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 05:53:27.800 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 05:53:30.106 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 05:53:31.117 [main] HomePageTest - Feedback form  was not submitted sucessfully
+[INFO ] 2022-03-19 05:53:33.999 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 05:53:34.036 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 05:53:35.498 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 05:53:35.532 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 05:53:36.375 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 05:53:36.507 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 05:53:37.219 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 05:53:37.574 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 05:53:37.802 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 05:53:37.973 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 05:59:16.024 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 05:59:16.998 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 05:59:17.295 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 05:59:21.167 [main] HomePageTest - prev button is enabled
+[INFO ] 2022-03-19 05:59:23.151 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 05:59:32.254 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 05:59:34.348 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 05:59:35.628 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 05:59:37.617 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 05:59:39.905 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 05:59:41.201 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:00:15.304 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 06:00:17.405 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:00:18.732 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:00:20.746 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:00:22.550 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:00:23.560 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:00:28.849 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:00:30.786 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:00:32.002 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:00:33.816 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-19 06:00:35.592 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:00:36.603 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-19 06:00:37.191 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 06:00:37.352 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 06:00:37.586 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 06:00:37.737 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 06:26:17.499 [main] CategoriesPageTest - functioning of catrgories icon verified 
+[INFO ] 2022-03-19 06:26:48.610 [main] LoginPageTest - Form to login opened sucessfully
+[INFO ] 2022-03-19 06:26:54.543 [main] LoginPageTest - Form to signup opened sucessfully
+[INFO ] 2022-03-19 06:27:19.164 [main] AboutUsPageTest - Aboutus icon clicked
+[INFO ] 2022-03-19 06:27:19.642 [main] AboutUsPageTest - functioning of Aboutus icon verified 
+[INFO ] 2022-03-19 06:27:39.451 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 06:27:39.723 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 06:27:39.926 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 06:27:45.934 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 06:27:56.366 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:27:58.549 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:27:59.979 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:28:02.127 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:28:04.044 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:28:05.329 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:28:39.321 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 06:28:41.433 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:28:42.688 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:28:44.616 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:28:46.430 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:28:47.432 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:28:52.531 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:28:54.452 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:28:55.635 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:28:57.457 [main] HomePageTest - invalid subject entered
+[INFO ] 2022-03-19 06:28:59.215 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:29:00.226 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-19 06:29:00.903 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 06:29:01.149 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 06:29:01.420 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 06:29:01.868 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 06:32:16.043 [main] CategoriesPageTest - functioning of catrgories icon verified 
+[INFO ] 2022-03-19 06:32:41.393 [main] LoginPageTest - Form to login opened sucessfully
+[INFO ] 2022-03-19 06:32:42.920 [main] LoginPageTest - Form to signup opened sucessfully
+[INFO ] 2022-03-19 06:33:02.811 [main] AboutUsPageTest - Aboutus icon clicked
+[INFO ] 2022-03-19 06:33:03.486 [main] AboutUsPageTest - functioning of Aboutus icon verified 
+[INFO ] 2022-03-19 06:33:23.304 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 06:33:23.693 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 06:33:23.948 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 06:33:29.334 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 06:33:37.949 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 06:33:39.926 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:33:41.482 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:33:43.904 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:33:45.925 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:33:46.928 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:33:51.280 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:33:53.358 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 06:33:54.680 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:33:56.633 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:33:58.416 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:33:59.426 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-19 06:34:04.710 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:34:06.647 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:34:07.872 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:34:09.758 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:34:11.560 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:34:12.628 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:34:13.265 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 06:34:13.301 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 06:34:14.297 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 06:34:14.361 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 06:34:15.154 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 06:34:15.179 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 06:34:15.362 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 06:34:15.545 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 06:34:15.711 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 06:34:15.855 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 06:47:51.244 [main] CategoriesPageTest - functioning of catrgories icon verified 
+[INFO ] 2022-03-19 06:48:22.248 [main] LoginPageTest - Form to login opened sucessfully
+[INFO ] 2022-03-19 06:48:25.685 [main] LoginPageTest - Form to signup opened sucessfully
+[INFO ] 2022-03-19 06:48:55.767 [main] AboutUsPageTest - Aboutus icon clicked
+[INFO ] 2022-03-19 06:48:56.993 [main] AboutUsPageTest - functioning of Aboutus icon verified 
+[INFO ] 2022-03-19 06:49:21.751 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 06:49:22.156 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 06:49:22.380 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 06:49:28.314 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 06:49:38.397 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 06:49:40.961 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:49:42.445 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:49:44.626 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:49:46.708 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:49:47.709 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:49:52.226 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:49:54.546 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 06:49:55.865 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:49:57.914 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:49:59.827 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:50:00.832 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-19 06:50:06.973 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 06:50:09.016 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 06:50:10.369 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 06:50:12.497 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 06:50:14.644 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 06:50:16.058 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 06:50:16.627 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 06:50:16.648 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 06:50:17.761 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 06:50:17.796 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 06:50:18.863 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 06:50:18.899 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 06:50:19.366 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 06:50:19.552 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 06:50:19.816 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 06:50:20.072 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 07:01:39.945 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 07:01:40.676 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 07:01:41.025 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 07:02:00.262 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 07:02:02.703 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 07:02:04.052 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 07:02:06.198 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 07:02:09.045 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 07:02:10.061 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 07:02:45.815 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 07:02:47.754 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 07:02:49.050 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 07:02:51.040 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 07:02:52.988 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 07:02:53.998 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-19 07:02:59.290 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 07:03:01.303 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 07:03:02.600 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 07:03:04.614 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 07:03:06.371 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 07:03:07.675 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 07:03:08.331 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 07:03:08.362 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 07:03:09.360 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 07:03:09.458 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 07:03:10.326 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 07:03:10.383 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 07:03:10.633 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 07:03:10.911 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 07:03:11.075 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 07:03:11.335 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 09:22:24.333 [main] CategoriesPageTest - functioning of catrgories icon verified 
+[INFO ] 2022-03-19 09:22:57.392 [main] LoginPageTest - Form to login opened sucessfully
+[INFO ] 2022-03-19 09:23:00.835 [main] LoginPageTest - Form to signup opened sucessfully
+[INFO ] 2022-03-19 09:23:25.862 [main] HomePageTest - Techblog site opened sucessfully
+[INFO ] 2022-03-19 09:23:26.341 [main] HomePageTest - ICTAK logo visibiled at the left top of the page
+[INFO ] 2022-03-19 09:23:26.576 [main] HomePageTest - Welcome text is visibiled
+[INFO ] 2022-03-19 09:23:31.883 [main] HomePageTest - next button is enabled
+[INFO ] 2022-03-19 09:23:40.686 [main] HomePageTest - invalid Firstname entered
+[INFO ] 2022-03-19 09:23:42.692 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 09:23:44.248 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 09:23:46.275 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 09:23:48.715 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 09:23:49.724 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 09:23:54.076 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 09:23:55.948 [main] HomePageTest - invalid Lastname entered
+[INFO ] 2022-03-19 09:23:57.140 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 09:23:59.047 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 09:24:00.862 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 09:24:01.868 [main] HomePageTest - Feedback form was not submitted sucessfully
+[INFO ] 2022-03-19 09:24:07.308 [main] HomePageTest - valid Firstname entered
+[INFO ] 2022-03-19 09:24:09.356 [main] HomePageTest - valid Lastname entered
+[INFO ] 2022-03-19 09:24:10.598 [main] HomePageTest - valid country name selected
+[INFO ] 2022-03-19 09:24:12.524 [main] HomePageTest - valid subject entered
+[INFO ] 2022-03-19 09:24:14.286 [main] HomePageTest - submit clicked
+[INFO ] 2022-03-19 09:24:15.582 [main] HomePageTest - Feedback form submitted sucessfully
+[INFO ] 2022-03-19 09:24:16.100 [main] HomePageTest - homelink clicked
+[INFO ] 2022-03-19 09:24:16.122 [main] HomePageTest - homepage opened sucessfully
+[INFO ] 2022-03-19 09:24:19.383 [main] HomePageTest - contactuslink clicked
+[INFO ] 2022-03-19 09:24:19.483 [main] HomePageTest - contactus page opened sucessfully
+[INFO ] 2022-03-19 09:24:21.617 [main] HomePageTest - aboutuslink clicked
+[INFO ] 2022-03-19 09:24:21.661 [main] HomePageTest - aboutus page opened sucessfully
+[INFO ] 2022-03-19 09:24:21.909 [main] HomePageTest - verified the presence of facebook Image 
+[INFO ] 2022-03-19 09:24:22.196 [main] HomePageTest - verified the presence of twitter Image
+[INFO ] 2022-03-19 09:24:22.407 [main] HomePageTest - verified the presence of instagram Image
+[INFO ] 2022-03-19 09:24:22.731 [main] HomePageTest - verified the presence oflinkedin Image
+[INFO ] 2022-03-19 09:26:19.714 [main] AboutUsPageTest - Aboutus icon clicked
+[INFO ] 2022-03-19 09:26:20.260 [main] AboutUsPageTest - functioning of Aboutus icon verified 
