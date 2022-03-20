@@ -9,7 +9,12 @@
     <classes>
       <class name="Scripts.Admin.TestAdminLogin">
         <methods>
+          <include name="VerifyValidUsernameInvalidPassword"/>
           <include name="teardown"/>
+          <include name="VerifyBlankUsernamePassword"/>
+          <include name="VerifyLoginAsAdmin"/>
+          <include name="VerifyInvalidUsernamePassword"/>
+          <include name="VerifyInvalidUsernameValidPassword"/>
           <include name="afterTest"/>
           <include name="onSetup"/>
           <include name="VerifyTotalElementsLoginPage"/>

@@ -46,3 +46,12 @@ buildNumber.properties
 
 #Intellij
 .idea
+/.DS_Store
+/.gitignore
+/.settings/
+/DRIVER/
+/Drivers/
+/Readme.md
+/pom.xml
+/src/
+/test-output/
