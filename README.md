@@ -2,6 +2,16 @@
 
 This project contains the automation code for ICT website. http://64.227.132.106/
 
+  
+# Demo
+  The demo video show how to open the Trainer project and run in eclipse in mac enviroment. 
+## TestNG Demo as Trainer  
+  [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/W1L_wc9cjNo/0.jpg)](http://www.youtube.com/watch?v=W1L_wc9cjNo)
+  
+## TestNG Demo as Admin  
+  [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/QFUkgsJDrbE/0.jpg)](http://www.youtube.com/watch?v=QFUkgsJDrbE)
+
+
 # Folder Stucture 
 ## Project 
 This is divided in 4 main seperate Eclipse/Intellij project. 
@@ -40,12 +50,6 @@ public class TestBase {
 This folder contains combined reports from the TestNG/Extent Report / JMeter 
 
 ## Documents
-
-  
-# Demo
-  The demo video show how to open the Trainer project and run in eclipse in mac enviroment. 
-  
-  [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/W1L_wc9cjNo/0.jpg)](http://www.youtube.com/watch?v=W1L_wc9cjNo)
 
   
 
