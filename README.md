@@ -15,8 +15,8 @@ To run the project for the individual feature open /Projects/<Feature> in eclips
   The demo video show how to open the Trainer project and run in eclipse in mac enviroment. 
 
   
-  h1. Demo
+DEMO
   
-  [![Demo Link](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=W1L_wc9cjNo&ab_channel=KrishnaPriya)
+  [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/W1L_wc9cjNo/0.jpg)](http://www.youtube.com/watch?v=W1L_wc9cjNo)
   
-  <a href="http://www.youtube.com/watch?feature=player_embedded&v=ttps://www.youtube.com/watch?v=W1L_wc9cjNo&ab_channel=KrishnaPriya" target="_blank">
+
