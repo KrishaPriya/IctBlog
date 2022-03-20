@@ -7,9 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import Utilities.pageutility;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 //CAN DELETE GENERAL METHODS FOR ADDING POST
 public class AllPostsPage {
@@ -100,9 +102,10 @@ public class AllPostsPage {
     }
 
     //entering title in new post
-    public void entertitle(String title) {
+    public void entertitle(String title) throws InterruptedException {
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);" ,txttitle);
 		pageutility.waitForElementTobeVisible(driver,txttitle,50);
-
+        Thread.sleep(2000);
         txttitle.clear();
         txttitle.sendKeys(title);
     }

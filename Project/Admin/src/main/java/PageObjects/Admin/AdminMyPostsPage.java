@@ -75,9 +75,10 @@ public class AdminMyPostsPage {
     }
 
     //entering title in new post
-    public void entertitle(String title) {
-		pageutility.waitForElementTobeVisible(driver,txttitle,50);
-
+    public void entertitle(String title) throws InterruptedException {
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);" ,txttitle);
+        pageutility.waitForElementTobeVisible(driver,txttitle,50);
+        Thread.sleep(2000);
         txttitle.clear();
         txttitle.sendKeys(title);
     }
