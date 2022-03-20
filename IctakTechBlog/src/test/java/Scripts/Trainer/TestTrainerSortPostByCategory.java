@@ -25,6 +25,7 @@ public class TestTrainerSortPostByCategory extends TestBase {
     public TestTrainerSortPostByCategory() {
         super();
         logger = Logger.getLogger(TestTrainerSortPostByCategory.class);
+
         BasicConfigurator.configure();
     }
 
@@ -34,9 +35,11 @@ public class TestTrainerSortPostByCategory extends TestBase {
         TrainerMyPostPage.isPageLoaded(driver);
         objMyPost=new TrainerMyPostPage(driver);
         objMyPost.selectCategoriesDropdown("SPACE");
+        logger.info("Space category is selected");
 
 
         TrainerMyCategory.isPageLoaded(driver,"SPACE");
+        logger.info("Space navigation page is opened");
         objMyCategory = new TrainerMyCategory(driver);
 
         Assert.assertEquals(objMyCategory.getTitle(),"SPACE");

@@ -34,7 +34,6 @@ public class TestTrainerDeletePostInAdmin extends TestBase {
     @Test(priority=1)
     public  void deleteTrainerPostByAdminLogin() throws InterruptedException, IOException
     {
-        HomePage.isPageLoaded(driver);
         HomePage homePage = new HomePage(driver);
         homePage.selectLoginDropdown();
 

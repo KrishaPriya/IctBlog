@@ -49,6 +49,9 @@ public class TestTrainerLogin extends TestBase {
     }
 
 
+
+
+
     @Test(priority = 1)
     public void verifyLoginWithoutUsernameWithoutPassword() throws IOException, InterruptedException {
         Actions act = new Actions(driver);
@@ -58,6 +61,7 @@ public class TestTrainerLogin extends TestBase {
         LoginPage.isPageLoaded(driver);
         objLogin = new LoginPage(driver);
         objLogin.clickLogin();
+        //logger.info("Login button clicked");
 
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
@@ -80,7 +84,9 @@ public class TestTrainerLogin extends TestBase {
         objLogin = new LoginPage(driver);
         String username = ExcelUtility.getTrainerCellData(1, 0);
         objLogin.setUserName(username);
+      //  logger.info("Username entered");
         objLogin.clickLogin();
+      //  logger.info("Login button clicked");
 
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
@@ -100,6 +106,7 @@ public class TestTrainerLogin extends TestBase {
         String username = ExcelUtility.getTrainerCellData(4, 0);
         String password = ExcelUtility.getTrainerCellData(4, 1);
         objLogin.loginToUser(username, password);
+        logger.info("Entered username and password");
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WEBDRIVER_WAIT_TIME_SEC));
 
@@ -124,6 +131,7 @@ public class TestTrainerLogin extends TestBase {
         String username = ExcelUtility.getTrainerCellData(1, 0);
         String password = ExcelUtility.getTrainerCellData(1, 1);
         objLogin.loginToUser(username, password);
+        logger.info("Entered username and password");
 
         // user should be in login page only
         String strUrl = driver.getCurrentUrl();
@@ -133,6 +141,33 @@ public class TestTrainerLogin extends TestBase {
     }
 
     @Test(priority = 5)
+    public void findNoOfElementsInLoginPage() throws InterruptedException {
+        //new WebDriverWait(driver, timeout).ignoring(StaleElementReferenceException.class).until(ExpectedConditions.elementToBeClickable(By.id("checkoutLink")));
+        driver.navigate().refresh();
+        objLogin= new LoginPage(driver);
+        //  Thread.sleep(500);
+        int headerlinks = objLogin.findNoOfElementsInHeader();
+        System.out.println("Number of headerlinks is:" +headerlinks);
+        Assert.assertEquals(headerlinks, 5);
+
+        int noOfTextBoxes=objLogin.findNoOfTextBoxesInLogin();
+        System.out.println("Number of textboxes is:" +noOfTextBoxes);
+        Assert.assertEquals(noOfTextBoxes,2);
+
+
+
+        int noOfButton=objLogin.findNoOfButtonInLogin();
+        System.out.println("Number of button is:" +noOfButton);
+        Assert.assertEquals(noOfButton,1);
+
+
+
+        int noOfLinksInFooter=objLogin.findNoOfElementsInFooter();
+        System.out.println("Number of links in footer is :" +noOfLinksInFooter);
+        Assert.assertEquals(noOfLinksInFooter,3);
+    }
+
+    @Test(priority = 6)
     public void verifyValidLogin() throws IOException, InterruptedException {
         Actions act = new Actions(driver);
         LoginPage.isPageLoaded(driver);
@@ -142,6 +177,7 @@ public class TestTrainerLogin extends TestBase {
         String username = ExcelUtility.getTrainerCellData(0, 0);
         String password = ExcelUtility.getTrainerCellData(0, 1);
         objLogin.loginToUser(username, password);
+      //  logger.info("Entered username and password");
 
         // Check the url
         String strUrl = driver.getCurrentUrl();
@@ -156,6 +192,23 @@ public class TestTrainerLogin extends TestBase {
     }
 
 
+
+   /* @Test(priority=4)
+    public  void findNoOfTextBoxInLogin(){
+        driver.navigate().refresh();
+        objLogin= new LoginPage(driver);
+        int noOfTextBoxes=objLogin.findNoOfTextBoxesInLogin();
+        System.out.println(noOfTextBoxes);
+        Assert.assertEquals(noOfTextBoxes,2);
+    }
+
+    @Test(priority = 5)
+    public void findNoOfLinksInFooter(){
+        driver.navigate().refresh();
+        objLogin=new LoginPage(driver);
+    }
+
+    */
     private void logoutAfterTest() {
         TrainerMyPostPage.isPageLoaded(driver);
         // Logout

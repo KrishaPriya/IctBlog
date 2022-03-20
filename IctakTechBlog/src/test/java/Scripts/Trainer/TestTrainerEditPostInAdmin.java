@@ -50,6 +50,7 @@ public class TestTrainerEditPostInAdmin extends TestBase {
         LoginPage.isPageLoaded(driver);
         login=new LoginPage(driver);
         login.loginAsAdmin();
+        logger.info("Admin login opened");
 
         AllPostsPage.isPageLoaded(driver);
         allPostsPage = new AllPostsPage(driver);
@@ -65,8 +66,11 @@ public class TestTrainerEditPostInAdmin extends TestBase {
         String image=ExcelUtility.getTrainerCellData(10,4);
         String post=ExcelUtility.getTrainerCellData(10,5);
         objEdit.setTitle(title);
+        logger.info("Entered title");
         objEdit.setImage(image);
+        logger.info("Entered image");
         objEdit.setPostDesc(post);
+        logger.info("Added description");
         objEdit.setSubmit();
 
         // Accept Alert

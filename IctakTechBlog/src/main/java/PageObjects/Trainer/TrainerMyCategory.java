@@ -36,16 +36,18 @@ public class TrainerMyCategory {
         PageFactory.initElements(driver,this);
     }
 
+
+    //for getting title
     public String getTitle() {
         return tittle.getText();
     }
 
-
+    //for logout
     public void clickLogout() {
         logout.click();
     }
 
-    //for deleting post of user login from admin
+    //for sorting
     public int sortByCategoryCount(String userName) throws InterruptedException {
 //        List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
         List<WebElement> userNames = driver.findElements(By.xpath("//p[contains(text(),'By "+userName+"')]"));

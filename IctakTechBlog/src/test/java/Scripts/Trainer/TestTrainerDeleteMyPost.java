@@ -62,6 +62,7 @@ public class TestTrainerDeleteMyPost extends TestBase {
         String username= ExcelUtility.getTrainerCellData(0,0);
         String password=ExcelUtility.getTrainerCellData(0,1);
         objLogin.loginToUser(username,password);
+        //logger.info("Entered username and password");
         String expectedTitle= AutomationConstants.HOME_PAGE_TITLE;
         String actualTitle=driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);

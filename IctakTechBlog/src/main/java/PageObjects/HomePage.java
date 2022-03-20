@@ -1,9 +1,8 @@
 package PageObjects;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.poi.ss.formula.functions.T;
+import org.openqa.selenium.*;
+import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class HomePage {
     private static final long WEBDRIVER_WAIT_TIME_SEC = 2000;
@@ -46,12 +46,17 @@ public class HomePage {
     @FindBy(xpath="/html/body/app-root/app-home/app-header/nav/div/div/ul/li[11]/ul/li[2]/a")
     private WebElement signUp;
 
+    @FindBy(xpath="//a[contains(@class, 'nav-link')]")
+    private WebElement headerLinks;
+
     public  HomePage(WebDriver driver)
     {
+        HomePage.isPageLoaded(driver);
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
 
+    //for clicking logout
     public void logout()
     {
         logout.click();
@@ -62,23 +67,31 @@ public class HomePage {
     }
     */
 
+    //for clicking new post
     public void clickOnNewPost() throws InterruptedException {
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",newpost);
         Thread.sleep(2000);
         newpost.click();
     }
-
+    //for clikcing mypost
     public void clickOnMyPost() throws InterruptedException {
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",myPost);
-        Thread.sleep(2000);
-        myPost.click();
+        WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-home/app-header/nav/div/div/ul/li[3]/a"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",element);
+        Thread.sleep(1000);
+        element.click();
 
     }
+    //for clicking About us
     public void clickOnAboutUs(){
         driver.findElement(By.xpath("//*[@id=\"nav\"]"));
     }
-    public void clickOnContactUs(){
-        driver.findElement(By.xpath("/html/body/app-root/app-home/app-header/nav/div/div/ul/li[9]/a")).click();
+
+    //for clicking contact us
+    public void clickOnContactUs() throws InterruptedException {
+        WebElement element = driver.findElement(By.xpath("/html/body/app-root/app-home/app-header/nav/div/div/ul/li[9]/a"));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",element);
+        Thread.sleep(1000);
+        element.click();
     }
 
     //Select for categories from dropdown
@@ -107,6 +120,8 @@ public class HomePage {
         return logo.isDisplayed();
     }
 
+
+
     public void findNoOfElementsInDropDown(){
         //for selecting space
 
@@ -116,8 +131,11 @@ public class HomePage {
         for(WebElement element:elements){
 
         }
-
     }
+
+
+
+
 
     public static void isPageLoaded(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,5);

@@ -216,7 +216,7 @@ public class AllPostsPage {
         logout.click();
     }
 
-    //for editing post of user login from admin
+    //for editing post of trainer login from admin
     public void editFirstPostByUser(String userName) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver,5);
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));
@@ -240,7 +240,7 @@ public class AllPostsPage {
         }
     }
 
-    //for deleting post of user login from admin
+    //for deleting post of trainer login from admin
     public void deleteFirstPostByUser(String userName) throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver,5);
         List<WebElement> cards = driver.findElements(By.xpath("//*[contains(@class, 'card-body')]"));

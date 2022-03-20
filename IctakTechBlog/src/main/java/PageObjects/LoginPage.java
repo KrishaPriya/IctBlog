@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import javax.xml.datatype.Duration;
 import java.io.IOException;
+import java.util.List;
+import java.util.logging.Logger;
 
 
 public class LoginPage {
@@ -53,7 +55,6 @@ public class LoginPage {
         selOption.click();
         Actions act = new Actions(driver);
         act.click(login).perform();
-
     }
 
     public static void isPageLoaded(WebDriver driver){
@@ -86,7 +87,7 @@ public class LoginPage {
         Login.click();
     }
 
-
+    //for logout
     public void clickLogout() {
 
         Logout.click();
@@ -112,6 +113,7 @@ public class LoginPage {
         this.clickLogin();
     }
 
+    //for login as admin
     public void loginAsAdmin() throws InterruptedException, IOException{
 //        this.selectLoginDropdown();
         String username = ExcelUtility.getAdminCellData(0, 0);
@@ -119,10 +121,53 @@ public class LoginPage {
         this.loginToUser(username,password);
     }
 
+    //for login as trainer
     public void loginAsTrainer() throws InterruptedException, IOException{
 //        this.selectLoginDropdown();
         String username= ExcelUtility.getTrainerCellData(0,0);
         String password=ExcelUtility.getTrainerCellData(0,1);
         this.loginToUser(username,password);
+    }
+
+    //finding no of links in header
+    public int findNoOfElementsInHeader() throws InterruptedException {
+
+        List<WebElement> elements=driver.findElements(By.xpath("//a[contains(@class, 'nav-link')]"));
+        int links=elements.size();
+
+        return links;
+    }
+
+    //finding no of textbox in login
+    public int findNoOfTextBoxesInLogin() {
+        List<WebElement> elements = driver.findElements(By.xpath("//input"));
+        int count = elements.size();
+        int totalCount = 0;
+        System.out.println(count);
+
+        for (WebElement element:  elements) {
+            if (element.isEnabled() && element.isDisplayed()    ){
+                totalCount ++;
+            }
+        }
+        return totalCount;
+    }
+
+
+
+
+
+      //for finding no of elements in footer
+    public int findNoOfElementsInFooter(){
+        List<WebElement> elements=driver.findElements(By.xpath("//a[contains(@class, 'text-white')]"));
+        int count=elements.size();
+        return count;
+    }
+
+    //for finding no of button in login
+    public int findNoOfButtonInLogin(){
+        List<WebElement> elements=driver.findElements(By.xpath("//button[contains(text(),'Login')]"));
+        int count=elements.size();
+        return count;
     }
 }

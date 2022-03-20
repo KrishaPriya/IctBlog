@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 public class TrainerNewPostPage {
     WebDriver driver;
 
@@ -72,6 +74,7 @@ public class TrainerNewPostPage {
         Submit.click();
     }
 
+    //for checking if submit is enabled
     public boolean isSubmitButtonEnabled(){
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Submit);
         WebDriverWait wait = new WebDriverWait(driver,5);
@@ -107,6 +110,40 @@ public class TrainerNewPostPage {
         wait.until(ExpectedConditions.visibilityOf(title));
     }
 
+    //for finding no of header links
+    public int noOfHeaderLinksInTrainerLogin(){
+        List<WebElement> elements=driver.findElements(By.xpath("//a[contains(@class, 'nav-link')]"));
+        int count=elements.size();
+        return count;
+    }
+
+    //for finding no of textboxes
+    public int noOfTextBoxesInNewPostPage(){
+        List<WebElement> elements=driver.findElements(By.xpath("//input"));
+        int count=elements.size();
+        return count;
+    }
+
+    //for finding no of text area
+    public int noOfTextAreaInNewPostPage(){
+        List<WebElement> elements=driver.findElements(By.xpath("//textarea"));
+        int count=elements.size();
+        return count;
+    }
+
+    //for finding no of dropdown
+    public int noOfDropDownInNewPostPage(){
+        List<WebElement> elements=driver.findElements(By.xpath("//select"));
+        int count=elements.size();
+        return count;
+    }
+
+    //for finding no of submit button
+    public int noOfSubmitButton(){
+        List<WebElement> elements=driver.findElements(By.xpath("//button[contains(@class,'btn text-center btn-primary')]"));
+        int count=elements.size();
+        return count;
+    }
 }
 
 

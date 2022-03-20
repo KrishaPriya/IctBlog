@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
 import java.util.Random;
 
 public class SignUpPage {
@@ -142,7 +143,7 @@ public class SignUpPage {
     public void enterNewRandomMailId(){
         Email.click();
         Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(1000);
+        int randomInt = randomGenerator.nextInt(10000);
         Email.sendKeys("username"+ randomInt +"@gmail.com");
     }
 
@@ -160,5 +161,29 @@ public class SignUpPage {
         WebElement title = driver.findElement(By.xpath("//h3[contains(text(),'Signup form')]"));
         wait.until(ExpectedConditions.visibilityOf(title));
     }
+   //for finding no of text boxes
+    public int findNoOfTextBoxes(){
+        List<WebElement> elements=driver.findElements(By.xpath("//input"));
+        int count=elements.size();
+        int totalCount = 0;
+        System.out.println(count);
+        for (WebElement element:  elements) {
+            if (element.isEnabled() && element.isDisplayed()){
+                totalCount ++;
+            }
+        }
+        return totalCount;
+    }
+     //for finding no of dropdown
+    public int findNoOfDropdown(){
+        List<WebElement> elements=driver.findElements(By.xpath("//select"));
+        return elements.size();
+    }
 
+    //for finding no of button
+    public int findNoOfButton(){
+        List<WebElement> elements=driver.findElements(By.xpath("//button[contains(text(),'Submit')]"));
+        int count=elements.size();
+        return count;
+    }
 }

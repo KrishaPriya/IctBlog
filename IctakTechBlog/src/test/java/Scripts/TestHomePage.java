@@ -4,7 +4,9 @@ import PageObjects.HomePage;
 import Scripts.Trainer.TestTrainerDeleteMyPost;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -30,14 +32,10 @@ public class TestHomePage extends TestBase{
         Assert.assertTrue(flag);
 
     }
-    @Test(priority=2)
-    public void categorydropdown() throws InterruptedException {
-        homePage=new HomePage(driver);
-        Thread.sleep(500);
-        homePage.selectCategoriesDropdown();
 
 
     }
 
-}
+
+
 

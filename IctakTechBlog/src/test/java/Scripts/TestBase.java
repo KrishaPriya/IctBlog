@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class TestBase {
     public static Properties prop = null;
@@ -33,6 +35,9 @@ public class TestBase {
     @Parameters("browser")
     @BeforeClass
     public void onSetup(String browserName) throws InterruptedException {
+      //  Logger logger= LogManager.getLogger(TestBase.class);
+
+
         Thread.currentThread().getStackTrace();
         Thread.sleep(3000);
         System.out.println("onSetup is called....");

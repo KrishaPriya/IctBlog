@@ -24,7 +24,14 @@ public class AboutUs {
         PageFactory.initElements(driver,this);
     }
 
-    public void setAboutUsTitle(String title)
+    // check the visibility of aboutus text
+        public String validateaboutusText() {
+           // PageUtility.waitForElementTobeclickable(driver, aboutustext,200);
+            return aboutUsTitle.getText();
+
+        }
+
+        public void setAboutUsTitle(String title)
     {
         aboutUsTitle.getText();
     }

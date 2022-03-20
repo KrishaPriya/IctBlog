@@ -81,6 +81,7 @@ public class TrainerMyPostPage {
         PostDesc.sendKeys(strPostDesc);
     }
 
+    //for submit
     public void submit()
     {
         SubmitBtn.click();
@@ -114,6 +115,7 @@ public class TrainerMyPostPage {
 
     //for deleting all post
     public int deleteAllPost() throws InterruptedException {
+        Thread.sleep(2000);
         WebElement button = getNextDeleteButton();
         int count = 0;
         while (button != null){

@@ -49,9 +49,13 @@ public class TestTrainerEditMyPost extends TestBase {
         String image = ExcelUtility.getTrainerCellData(10, 4);
         String post = ExcelUtility.getTrainerCellData(10, 5);
         objEdit.setTitle(title);
+        logger.info("Entered title");
         objEdit.setImage(image);
+        logger.info("Entered image");
         objEdit.setPostDesc(post);
+        logger.info("Entered description");
         objEdit.setSubmit();
+        logger.info("Clicked on submit");
 
         // Accept Alert
         WebDriverWait w = new WebDriverWait(driver, 2000);
@@ -65,7 +69,6 @@ public class TestTrainerEditMyPost extends TestBase {
             driver.switchTo().alert().accept();
 
         }
-
         logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
     }
 
@@ -85,8 +88,11 @@ public class TestTrainerEditMyPost extends TestBase {
         String image = " ";
         String post = "";
         objEdit.setTitle(title);
+        //logger.info("Entered title");
         objEdit.setImage(image);
+        //logger.info("Entered image");
         objEdit.setPostDesc(post);
+        //logger.info("Entered description");
 
         Assert.assertEquals(objEdit.btnSubmitNotEnabled(), true);
         logger.info(new Exception().getStackTrace()[0].getMethodName()+" : success");
@@ -103,6 +109,7 @@ public class TestTrainerEditMyPost extends TestBase {
         String username= ExcelUtility.getTrainerCellData(0,0);
         String password=ExcelUtility.getTrainerCellData(0,1);
         objLogin.loginToUser(username,password);
+        //logger.info("Entered username and password");
         String expectedTitle= AutomationConstants.HOME_PAGE_TITLE;
         String actualTitle=driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);

@@ -73,4 +73,6 @@ public class TrainerEditPost {
         WebElement title = driver.findElement(By.xpath("//h2[contains(text(),'Edit post')]"));
         wait.until(ExpectedConditions.visibilityOf(title));
     }
+
+
 }
