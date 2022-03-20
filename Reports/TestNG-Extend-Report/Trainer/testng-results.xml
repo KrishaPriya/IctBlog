@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="32" passed="32" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-20T14:25:38 IST" name="All Test Suite" finished-at="2022-03-20T14:27:56 IST" duration-ms="137833">
+    <groups>
+    </groups>
+    <test started-at="2022-03-20T14:25:38 IST" name="Regression" finished-at="2022-03-20T14:27:56 IST" duration-ms="137833">
+      <class name="Scripts.Trainer.TestTrainerNewPost">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerNewPost@2c767a52]" started-at="2022-03-20T14:26:07 IST" name="onSetup" finished-at="2022-03-20T14:26:10 IST" duration-ms="2546" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="addingNewPost()[pri:1, instance:Scripts.Trainer.TestTrainerNewPost@2c767a52]" started-at="2022-03-20T14:26:10 IST" name="addingNewPost" finished-at="2022-03-20T14:26:13 IST" duration-ms="3226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addingNewPost -->
+        <test-method signature="addNewPostWithInvalidData()[pri:2, instance:Scripts.Trainer.TestTrainerNewPost@2c767a52]" started-at="2022-03-20T14:26:13 IST" name="addNewPostWithInvalidData" finished-at="2022-03-20T14:26:13 IST" duration-ms="407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewPostWithInvalidData -->
+        <test-method signature="findNoOfElementsInNewPostPage()[pri:3, instance:Scripts.Trainer.TestTrainerNewPost@2c767a52]" started-at="2022-03-20T14:26:13 IST" name="findNoOfElementsInNewPostPage" finished-at="2022-03-20T14:26:13 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findNoOfElementsInNewPostPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerNewPost@2c767a52]" started-at="2022-03-20T14:26:13 IST" name="teardown" finished-at="2022-03-20T14:26:14 IST" duration-ms="565" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterTestDone()[pri:0, instance:Scripts.Trainer.TestTrainerNewPost@2c767a52]" started-at="2022-03-20T14:27:56 IST" name="afterTestDone" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestDone -->
+      </class> <!-- Scripts.Trainer.TestTrainerNewPost -->
+      <class name="Scripts.Trainer.TestTrainerSortPostByCategory">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerSortPostByCategory@619713e5]" started-at="2022-03-20T14:26:14 IST" name="onSetup" finished-at="2022-03-20T14:26:16 IST" duration-ms="2405" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="validatePostByCategory()[pri:0, instance:Scripts.Trainer.TestTrainerSortPostByCategory@619713e5]" started-at="2022-03-20T14:26:16 IST" name="validatePostByCategory" finished-at="2022-03-20T14:26:20 IST" duration-ms="3825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePostByCategory -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerSortPostByCategory@619713e5]" started-at="2022-03-20T14:26:20 IST" name="teardown" finished-at="2022-03-20T14:26:20 IST" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Scripts.Trainer.TestTrainerSortPostByCategory -->
+      <class name="Scripts.TestContactUs">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:38 IST" name="onSetup" finished-at="2022-03-20T14:25:41 IST" duration-ms="3097" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="verifyHomePageLogo()[pri:0, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:41 IST" name="verifyHomePageLogo" finished-at="2022-03-20T14:25:41 IST" duration-ms="390" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageLogo -->
+        <test-method signature="verifyContactUsTitle()[pri:1, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:41 IST" name="verifyContactUsTitle" finished-at="2022-03-20T14:25:43 IST" duration-ms="1556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactUsTitle -->
+        <test-method signature="verifyContactUsForm()[pri:2, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:43 IST" name="verifyContactUsForm" finished-at="2022-03-20T14:25:43 IST" duration-ms="275" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactUsForm -->
+        <test-method signature="verifySendMessageWithoutName()[pri:3, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:43 IST" name="verifySendMessageWithoutName" finished-at="2022-03-20T14:25:43 IST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySendMessageWithoutName -->
+        <test-method signature="verifySendMessageWithoutEmail()[pri:4, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:43 IST" name="verifySendMessageWithoutEmail" finished-at="2022-03-20T14:25:44 IST" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySendMessageWithoutEmail -->
+        <test-method signature="verifyContactlistItemsArePresent()[pri:5, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:44 IST" name="verifyContactlistItemsArePresent" finished-at="2022-03-20T14:25:44 IST" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactlistItemsArePresent -->
+        <test-method signature="verifyTextInFooter()[pri:6, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:44 IST" name="verifyTextInFooter" finished-at="2022-03-20T14:25:44 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTextInFooter -->
+        <test-method signature="verifySocialMediaImagesArePresent()[pri:8, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:44 IST" name="verifySocialMediaImagesArePresent" finished-at="2022-03-20T14:25:44 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySocialMediaImagesArePresent -->
+        <test-method signature="verifyContactListItemsArePresent()[pri:9, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:44 IST" name="verifyContactListItemsArePresent" finished-at="2022-03-20T14:25:44 IST" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyContactListItemsArePresent -->
+        <test-method signature="verifyNoOfElementsInContactForm()[pri:10, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:44 IST" name="verifyNoOfElementsInContactForm" finished-at="2022-03-20T14:25:44 IST" duration-ms="29" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNoOfElementsInContactForm -->
+        <test-method signature="verifyFooterLinks()[pri:11, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:44 IST" name="verifyFooterLinks" finished-at="2022-03-20T14:25:48 IST" duration-ms="3933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFooterLinks -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:25:48 IST" name="teardown" finished-at="2022-03-20T14:25:48 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterTestDone()[pri:0, instance:Scripts.TestContactUs@481a996b]" started-at="2022-03-20T14:27:56 IST" name="afterTestDone" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestDone -->
+      </class> <!-- Scripts.TestContactUs -->
+      <class name="Scripts.Trainer.TestTrainerDeleteMyPost">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerDeleteMyPost@130161f7]" started-at="2022-03-20T14:25:55 IST" name="onSetup" finished-at="2022-03-20T14:25:58 IST" duration-ms="2545" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="deletePost()[pri:0, instance:Scripts.Trainer.TestTrainerDeleteMyPost@130161f7]" started-at="2022-03-20T14:25:58 IST" name="deletePost" finished-at="2022-03-20T14:26:07 IST" duration-ms="8537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePost -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerDeleteMyPost@130161f7]" started-at="2022-03-20T14:26:07 IST" name="teardown" finished-at="2022-03-20T14:26:07 IST" duration-ms="441" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterTestDone()[pri:0, instance:Scripts.Trainer.TestTrainerDeleteMyPost@130161f7]" started-at="2022-03-20T14:27:56 IST" name="afterTestDone" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestDone -->
+      </class> <!-- Scripts.Trainer.TestTrainerDeleteMyPost -->
+      <class name="Scripts.Trainer.TestTrainerSignup">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:43 IST" name="onSetup" finished-at="2022-03-20T14:27:46 IST" duration-ms="2513" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="verifySignUpWithAlreadyCreatedAccount()[pri:0, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:46 IST" name="verifySignUpWithAlreadyCreatedAccount" finished-at="2022-03-20T14:27:48 IST" duration-ms="1885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpWithAlreadyCreatedAccount -->
+        <test-method signature="verifySignUpWithInvalidUserNameInvalidPassword()[pri:1, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:48 IST" name="verifySignUpWithInvalidUserNameInvalidPassword" finished-at="2022-03-20T14:27:48 IST" duration-ms="303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignUpWithInvalidUserNameInvalidPassword -->
+        <test-method signature="verifyQualificationForTrainerAccount()[pri:2, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:48 IST" name="verifyQualificationForTrainerAccount" finished-at="2022-03-20T14:27:48 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyQualificationForTrainerAccount -->
+        <test-method signature="findNoOfElementsInSignUpForTrainer()[pri:4, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:48 IST" name="findNoOfElementsInSignUpForTrainer" finished-at="2022-03-20T14:27:48 IST" duration-ms="33" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findNoOfElementsInSignUpForTrainer -->
+        <test-method signature="verifyValidSignUp()[pri:5, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:48 IST" name="verifyValidSignUp" finished-at="2022-03-20T14:27:49 IST" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidSignUp -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:49 IST" name="teardown" finished-at="2022-03-20T14:27:49 IST" duration-ms="500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="resetTrainerSignup()[pri:0, instance:Scripts.Trainer.TestTrainerSignup@2ef3eef9]" started-at="2022-03-20T14:27:56 IST" name="resetTrainerSignup" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetTrainerSignup -->
+      </class> <!-- Scripts.Trainer.TestTrainerSignup -->
+      <class name="Scripts.Trainer.TestTrainerEditMyPost">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerEditMyPost@708f5957]" started-at="2022-03-20T14:26:20 IST" name="onSetup" finished-at="2022-03-20T14:26:23 IST" duration-ms="2553" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="verifyEditMyPost()[pri:1, instance:Scripts.Trainer.TestTrainerEditMyPost@708f5957]" started-at="2022-03-20T14:26:23 IST" name="verifyEditMyPost" finished-at="2022-03-20T14:26:34 IST" duration-ms="10950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditMyPost -->
+        <test-method signature="verifyEditMyPostWithInvalidData()[pri:2, instance:Scripts.Trainer.TestTrainerEditMyPost@708f5957]" started-at="2022-03-20T14:26:34 IST" name="verifyEditMyPostWithInvalidData" finished-at="2022-03-20T14:26:45 IST" duration-ms="10909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEditMyPostWithInvalidData -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerEditMyPost@708f5957]" started-at="2022-03-20T14:26:45 IST" name="teardown" finished-at="2022-03-20T14:26:45 IST" duration-ms="466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Scripts.Trainer.TestTrainerEditMyPost -->
+      <class name="Scripts.Trainer.TestTrainerEditPostInAdmin">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerEditPostInAdmin@68999068]" started-at="2022-03-20T14:26:45 IST" name="onSetup" finished-at="2022-03-20T14:26:48 IST" duration-ms="2847" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="editTrainerPostByAdminLogin()[pri:1, instance:Scripts.Trainer.TestTrainerEditPostInAdmin@68999068]" started-at="2022-03-20T14:26:48 IST" name="editTrainerPostByAdminLogin" finished-at="2022-03-20T14:27:16 IST" duration-ms="27545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editTrainerPostByAdminLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerEditPostInAdmin@68999068]" started-at="2022-03-20T14:27:16 IST" name="teardown" finished-at="2022-03-20T14:27:16 IST" duration-ms="671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Scripts.Trainer.TestTrainerEditPostInAdmin@68999068]" started-at="2022-03-20T14:27:56 IST" name="afterTest" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Scripts.Trainer.TestTrainerEditPostInAdmin -->
+      <class name="Scripts.Trainer.TestTrainerDeletePostInAdmin">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerDeletePostInAdmin@7722c3c3]" started-at="2022-03-20T14:27:16 IST" name="onSetup" finished-at="2022-03-20T14:27:19 IST" duration-ms="2891" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="deleteTrainerPostByAdminLogin()[pri:1, instance:Scripts.Trainer.TestTrainerDeletePostInAdmin@7722c3c3]" started-at="2022-03-20T14:27:19 IST" name="deleteTrainerPostByAdminLogin" finished-at="2022-03-20T14:27:43 IST" duration-ms="23577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTrainerPostByAdminLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerDeletePostInAdmin@7722c3c3]" started-at="2022-03-20T14:27:43 IST" name="teardown" finished-at="2022-03-20T14:27:43 IST" duration-ms="486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Scripts.Trainer.TestTrainerDeletePostInAdmin@7722c3c3]" started-at="2022-03-20T14:27:56 IST" name="afterTest" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Scripts.Trainer.TestTrainerDeletePostInAdmin -->
+      <class name="Scripts.TestHomePage">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.TestHomePage@243c4f91]" started-at="2022-03-20T14:27:49 IST" name="onSetup" finished-at="2022-03-20T14:27:52 IST" duration-ms="2479" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="verifyHomePageLogo()[pri:1, instance:Scripts.TestHomePage@243c4f91]" started-at="2022-03-20T14:27:52 IST" name="verifyHomePageLogo" finished-at="2022-03-20T14:27:55 IST" duration-ms="3336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomePageLogo -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.TestHomePage@243c4f91]" started-at="2022-03-20T14:27:55 IST" name="teardown" finished-at="2022-03-20T14:27:56 IST" duration-ms="466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- Scripts.TestHomePage -->
+      <class name="Scripts.Trainer.TestTrainerLogin">
+        <test-method is-config="true" signature="onSetup(java.lang.String)[pri:0, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:48 IST" name="onSetup" finished-at="2022-03-20T14:25:51 IST" duration-ms="2625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onSetup -->
+        <test-method signature="verifyLoginWithoutUsernameWithoutPassword()[pri:1, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:51 IST" name="verifyLoginWithoutUsernameWithoutPassword" finished-at="2022-03-20T14:25:52 IST" duration-ms="1458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithoutUsernameWithoutPassword -->
+        <test-method signature="verifyValidUserWithoutPassword()[pri:2, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:52 IST" name="verifyValidUserWithoutPassword" finished-at="2022-03-20T14:25:53 IST" duration-ms="1072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidUserWithoutPassword -->
+        <test-method signature="verifyInvalidUserInvalidPassword()[pri:3, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:53 IST" name="verifyInvalidUserInvalidPassword" finished-at="2022-03-20T14:25:54 IST" duration-ms="325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidUserInvalidPassword -->
+        <test-method signature="verifyValidUserInvalidPassword()[pri:4, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:54 IST" name="verifyValidUserInvalidPassword" finished-at="2022-03-20T14:25:54 IST" duration-ms="340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidUserInvalidPassword -->
+        <test-method signature="findNoOfElementsInLoginPage()[pri:5, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:54 IST" name="findNoOfElementsInLoginPage" finished-at="2022-03-20T14:25:54 IST" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findNoOfElementsInLoginPage -->
+        <test-method signature="verifyValidLogin()[pri:6, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:54 IST" name="verifyValidLogin" finished-at="2022-03-20T14:25:55 IST" duration-ms="463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:25:55 IST" name="teardown" finished-at="2022-03-20T14:25:55 IST" duration-ms="544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Scripts.Trainer.TestTrainerLogin@c33b74f]" started-at="2022-03-20T14:27:56 IST" name="afterTest" finished-at="2022-03-20T14:27:56 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Scripts.Trainer.TestTrainerLogin -->
+    </test> <!-- Regression -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
