@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Admin Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AdminEdit(failed)">
+    <classes>
+      <class name="Scripts.Admin.testAdminEdit">
+        <methods>
+          <include name="tearDown"/>
+          <include name="onSetup"/>
+          <include name="editUserPostByAdminLogin"/>
+        </methods>
+      </class> <!-- Scripts.Admin.testAdminEdit -->
+    </classes>
+  </test> <!-- AdminEdit(failed) -->
+</suite> <!-- Failed suite [Admin Suite] -->
