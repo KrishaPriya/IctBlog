@@ -2,14 +2,20 @@
 
 This project contains the automation code for ICT website. http://64.227.132.106/
 
-The Project structure have 
-1. Demo : This contains all the demo videos
-2. Report: This folder contains combined reports from the TestNG/Extent Report / JMeter 
-3. Project : This is divided in 3 main seperate Eclipse/Intellij project. 
-⋅⋅* Trainer Feature
-⋅⋅* User Feature
-⋅⋅* Admin Feature
-⋅⋅* Page Navigation 
+# Folder Stucture 
+## Project 
+This is divided in 3 main seperate Eclipse/Intellij project. 
+1. Trainer Feature
+2. User Feature
+3. Admin Feature
+4. Page Navigation 
+
+## Report
+This folder contains combined reports from the TestNG/Extent Report / JMeter 
+
+## Documents
+
+
 
 
 To run the project for the individual feature open /Projects/<Feature> in Eclipse and Intellij and run the TestNG test.xml file from the run configuration. 
