@@ -5,10 +5,10 @@ This project contains the automation code for ICT website. http://64.227.132.106
   
 # Demo
   The demo video show how to open the Trainer project and run in eclipse in mac enviroment. 
-## TestNG Demo as Trainer  
+## Automation Demo with Trainer role
   [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/W1L_wc9cjNo/0.jpg)](http://www.youtube.com/watch?v=W1L_wc9cjNo)
   
-## TestNG Demo as Admin  
+## Automation Demo with Admin role
   The demo video show how to open the Admin project and run in eclipse in mac enviroment. 
   [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/QFUkgsJDrbE/0.jpg)](http://www.youtube.com/watch?v=QFUkgsJDrbE)
 
