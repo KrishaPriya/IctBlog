@@ -1,8 +1,6 @@
 package Scripts;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -57,7 +55,10 @@ public class TestBase {
         WebDriverWait wait = new WebDriverWait(driver,5);
         wait.until(ExpectedConditions.urlToBe(prop.getProperty("url")));
 //        driver.manage().window().maximize();
+        driver.manage().window().setPosition(new Point(1024,0));
+        driver.manage().window().setSize(new Dimension(1024,728));
     }
+
 
     @AfterClass
     public void teardown() {
